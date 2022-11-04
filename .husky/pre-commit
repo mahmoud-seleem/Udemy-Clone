@@ -1,19 +1,19 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
-echo "Pre-commit check failed. Changes include lint issues."
 
 
-#./gradlew lint
-#status=$?
-#
-## Display messaging based on the result
-#if [ $status -eq 0 ]; then
-#  echo "======================================================="
-#  echo "Pre-commit check passed. Changes will now be committed."
-#  echo "======================================================="
-#else
-#  echo "======================================================="
-#  echo "Pre-commit check failed. Changes include lint issues."
-#  echo "======================================================="
-#fi
-#exit $status
+
+./gradlew lint
+status=$?
+
+# Display messaging based on the result
+if [ $status -eq 0 ]; then
+  echo "======================================================="
+  echo "Pre-commit check passed. Changes will now be committed."
+  echo "======================================================="
+else
+  echo "======================================================="
+  echo "Pre-commit check failed. Changes include lint issues."
+  echo "======================================================="
+fi
+exit $status
