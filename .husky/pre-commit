@@ -3,7 +3,7 @@
 
 
 
-#./gradlew lint
+./gradlew lint --scan
 status=$?
 
 # Display messaging based on the result

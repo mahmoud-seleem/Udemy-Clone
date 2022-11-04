@@ -13,6 +13,15 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    lintOptions {
+        lintConfig file("lint.xml")
+        quiet false
+    }
+    lint {
+        baseline = file("lint-baseline.xml")
     }
 
     buildTypes {
