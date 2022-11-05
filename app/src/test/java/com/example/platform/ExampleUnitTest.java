@@ -1,4 +1,4 @@
-package com.example.platformsignlayout;
+package com.example.platform;
 
 import org.junit.Test;
 

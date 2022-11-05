@@ -23,15 +23,4 @@
             column="45"/>
     </issue>
 
-    <issue
-        id="HardcodedText"
-        message="Hardcoded string &quot;asdjff&quot;, should use `@string` resource"
-        errorLine1="        android:contentDescription=&quot;asdjff&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/activity_main.xml"
-            line="8"
-            column="9"/>
-    </issue>
-
 </issues>
