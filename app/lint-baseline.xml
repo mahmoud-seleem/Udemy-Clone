@@ -25,12 +25,34 @@
 
     <issue
         id="UnusedResources"
-        message="The resource `R.drawable.settings_toolbar_back_icon` appears to be unused"
-        errorLine1="&lt;vector android:autoMirrored=&quot;true&quot; android:height=&quot;24dp&quot;"
+        message="The resource `R.drawable.settings_toolbar_back_button_background` appears to be unused"
+        errorLine1="&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
         errorLine2="^">
         <location
-            file="src/main/res/drawable/settings_toolbar_back_icon.xml"
-            line="1"
+            file="src/main/res/drawable/settings_toolbar_back_button_background.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.settings_toolbar_back_button_pressed_background` appears to be unused"
+        errorLine1="&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/settings_toolbar_back_button_pressed_background.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.settings_toolbar_back_button_selector_background` appears to be unused"
+        errorLine1="&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/settings_toolbar_back_button_selector_background.xml"
+            line="2"
             column="1"/>
     </issue>
 

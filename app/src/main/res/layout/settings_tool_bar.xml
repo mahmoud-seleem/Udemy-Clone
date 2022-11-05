@@ -5,17 +5,22 @@
     android:layout_height="match_parent"
     android:background="@color/blue">
 
-    <Button
-        android:id="@+id/settings_toolbar_backButton"
+    <ImageView
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/settings_toolbar_backImageView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
-        android:background="@drawable/settings_toolbar_back_button_background"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/app_name"
+        android:padding="8dp"
+        android:src="@drawable/settings_toolbar_back_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="w,1:1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516" />
 
     <TextView
         android:id="@+id/settings_toolbar_textView"
@@ -24,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="@string/settings_toolbar_title"
-        app:layout_constraintBottom_toBottomOf="@+id/settings_toolbar_backButton"
-        app:layout_constraintStart_toEndOf="@id/settings_toolbar_backButton"
-        app:layout_constraintTop_toTopOf="@+id/settings_toolbar_backButton" />
+        app:layout_constraintBottom_toBottomOf="@+id/settings_toolbar_backImageView"
+        app:layout_constraintStart_toEndOf="@id/settings_toolbar_backImageView"
+        app:layout_constraintTop_toTopOf="@+id/settings_toolbar_backImageView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,4 +13,5 @@
     <issue id="HardcodedText" severity="error"/>
     <issue id="RelativeOverlap" severity="error"/>
     <issue id="UnusedResources" severity="warning"/>
+    <issue id="Overdraw" severity="warning"/>
 </lint>
