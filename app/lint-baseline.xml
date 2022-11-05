@@ -2,14 +2,14 @@
 <issues format="6" by="lint 7.3.1" type="baseline" client="gradle" dependencies="false" name="AGP (7.3.1)" variant="all" version="7.3.1">
 
     <issue
-        id="ObsoleteSdkInt"
-        message="Unnecessary; SDK_INT is always >= 21"
-        errorLine1="        &lt;item name=&quot;android:statusBarColor&quot; tools:targetApi=&quot;l&quot;>?attr/colorPrimaryVariant&lt;/item>"
-        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~">
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/blue` with a theme that also paints a background (inferred theme is `@style/Theme.Platform`)"
+        errorLine1="    android:background=&quot;@color/blue&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="src/main/res/values-night/themes.xml"
-            line="13"
-            column="45"/>
+            file="src/main/res/layout/settings_tool_bar.xml"
+            line="6"
+            column="5"/>
     </issue>
 
     <issue
@@ -19,6 +19,17 @@
         errorLine2="^">
         <location
             file="src/main/res/drawable/ic_android_black_24dp.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.settings_toolbar_back_icon` appears to be unused"
+        errorLine1="&lt;vector android:autoMirrored=&quot;true&quot; android:height=&quot;24dp&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/settings_toolbar_back_icon.xml"
             line="1"
             column="1"/>
     </issue>
