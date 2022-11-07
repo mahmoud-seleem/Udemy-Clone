@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="350dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/SignActivity_login"
+        android:textAppearance="@style/SignActivity_login_text"
+        android:lineSpacingExtra="0sp"
+        android:translationY="-0.08sp"
+        android:gravity="top" />
+
+    <!-- Sign in with your data that you entered during your registration. -->
+    <TextView
+        android:id="@+id/sign_in_wit"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="93dp"
+        android:text="@string/SignActivity_sign_in_wit"
+        android:textAppearance="@style/SignActivity_sign_in_wit"
+        android:lineSpacingExtra="1sp"
+        android:translationY="-0.45sp"
+        android:gravity="top" />
+
+
+    <RelativeLayout
+        android:id="@+id/email_layout"
+        android:layout_width="350dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="150dp">
+
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/SignActivity_email"
+            android:textAppearance="@style/SignActivity_email_text"
+            android:lineSpacingExtra="0sp"
+            android:gravity="top" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:hint="@string/SignActivity_email_hint"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:labelFor="@id/email_label"
+            android:textColorHint="#757575"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/password_layout"
+        android:layout_width="350dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="242dp">
+
+        <TextView
+            android:id="@+id/password_label"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/SignActivity_password"
+            android:textAppearance="@style/SignActivity_email_text"
+            android:lineSpacingExtra="0sp"
+            android:gravity="top" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:hint="@string/SignActivity_password_hint"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:labelFor="@id/password_label"
+            android:textColorHint="#757575"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+    </RelativeLayout>
+
+</FrameLayout>
