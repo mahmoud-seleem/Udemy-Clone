@@ -37,25 +37,6 @@
             app:layout_constraintStart_toStartOf="@+id/view2"
             app:layout_constraintTop_toTopOf="@+id/view2" />
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/settings_spinner_selector_background"
-            android:clickable="true"
-            android:contentDescription="@string/app_name"
-            android:dropDownVerticalOffset="48dp"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="@+id/view2"
-            app:layout_constraintEnd_toEndOf="@+id/view2"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="@+id/view2" />
-
         <View
             android:id="@+id/view3"
             android:layout_width="0dp"
@@ -106,7 +87,6 @@
             android:progress="1"
             app:layout_constraintBottom_toBottomOf="@+id/textView10"
             app:layout_constraintEnd_toEndOf="@+id/view3"
-            app:layout_constraintStart_toStartOf="@+id/spinner"
             app:layout_constraintTop_toTopOf="@+id/textView10" />
 
         <TextView
@@ -153,64 +133,16 @@
             app:layout_constraintStart_toStartOf="@+id/textView17"
             app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
-        <androidx.appcompat.widget.SwitchCompat
+        <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/switchCompat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:thumb="@drawable/switch_thumb_background"
             app:layout_constraintBottom_toBottomOf="@+id/textView15"
             app:layout_constraintEnd_toEndOf="@+id/seekBar"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/textView15"
-            app:layout_constraintTop_toTopOf="@+id/textView15"
-            app:track="@drawable/switch_track_background" />
-
-        <Spinner
-            android:id="@+id/spinner2"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/settings_spinner_selector_background"
-            android:clickable="true"
-            android:contentDescription="@string/app_name"
-            android:dropDownVerticalOffset="48dp"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="@id/textView16"
-            app:layout_constraintEnd_toEndOf="@+id/switchCompat"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@id/textView16"
-            app:layout_constraintTop_toTopOf="@id/textView16" />
-
-        <Spinner
-            android:id="@+id/spinner3"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/settings_spinner_selector_background"
-            android:clickable="true"
-            android:contentDescription="@string/app_name"
-            android:dropDownVerticalOffset="48dp"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="@+id/textView17"
-            app:layout_constraintEnd_toEndOf="@+id/switchCompat"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView17"
-            app:layout_constraintTop_toTopOf="@+id/textView17" />
-
-        <Spinner
-            android:id="@+id/spinner4"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/settings_spinner_selector_background"
-            android:clickable="true"
-            android:contentDescription="@string/app_name"
-            android:dropDownVerticalOffset="48dp"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="@+id/textView18"
-            app:layout_constraintEnd_toEndOf="@+id/switchCompat"
-            app:layout_constraintTop_toTopOf="@+id/textView18" />
+            app:layout_constraintTop_toTopOf="@+id/textView15" />
 
         <View
             android:id="@+id/view4"
@@ -237,19 +169,17 @@
             app:layout_constraintStart_toStartOf="@+id/view4"
             app:layout_constraintTop_toTopOf="@+id/view4" />
 
-        <androidx.appcompat.widget.SwitchCompat
+        <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/switchCompat2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:minHeight="48dp"
-            android:thumb="@drawable/switch_thumb_background"
             app:layout_constraintBottom_toBottomOf="@+id/textView19"
             app:layout_constraintEnd_toEndOf="@+id/view4"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/textView19"
-            app:layout_constraintTop_toTopOf="@+id/textView19"
-            app:track="@drawable/switch_track_background" />
+            app:layout_constraintTop_toTopOf="@+id/textView19" />
 
         <TextView
             android:id="@+id/textView20"
@@ -261,22 +191,6 @@
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/textView19"
             app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-        <Spinner
-            android:id="@+id/spinner5"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/settings_spinner_selector_background"
-            android:clickable="true"
-            android:contentDescription="@string/app_name"
-            android:dropDownVerticalOffset="48dp"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="@+id/textView20"
-            app:layout_constraintEnd_toEndOf="@+id/switchCompat2"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView20"
-            app:layout_constraintTop_toTopOf="@+id/textView20" />
 
         <TextView
             android:id="@+id/textView22"
@@ -325,19 +239,17 @@
             app:layout_constraintStart_toStartOf="@+id/view7"
             app:layout_constraintTop_toTopOf="@+id/view7" />
 
-        <androidx.appcompat.widget.SwitchCompat
+        <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/switchCompat3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:minHeight="48dp"
-            android:thumb="@drawable/switch_thumb_background"
             app:layout_constraintBottom_toBottomOf="@+id/textView24"
             app:layout_constraintEnd_toEndOf="@+id/view7"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/textView24"
-            app:layout_constraintTop_toTopOf="@+id/textView24"
-            app:track="@drawable/switch_track_background" />
+            app:layout_constraintTop_toTopOf="@+id/textView24" />
 
         <TextView
             android:id="@+id/textView24"
@@ -349,22 +261,6 @@
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/textView23"
             app:layout_constraintTop_toBottomOf="@+id/textView23" />
-
-        <Spinner
-            android:id="@+id/spinner6"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/settings_spinner_selector_background"
-            android:clickable="true"
-            android:contentDescription="@string/app_name"
-            android:dropDownVerticalOffset="48dp"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="@+id/textView25"
-            app:layout_constraintEnd_toEndOf="@+id/switchCompat3"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView25"
-            app:layout_constraintTop_toTopOf="@+id/textView25" />
 
         <TextView
             android:id="@+id/textView25"
@@ -400,8 +296,6 @@
             android:padding="4dp"
             android:progress="1"
             app:layout_constraintBottom_toBottomOf="@+id/textView26"
-            app:layout_constraintEnd_toEndOf="@+id/spinner6"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/textView26"
             app:layout_constraintTop_toTopOf="@+id/textView26" />
 
@@ -555,54 +449,28 @@
             app:layout_constraintStart_toStartOf="@+id/textView33"
             app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
-        <Spinner
-            android:id="@+id/spinner7"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/settings_spinner_selector_background"
-            android:clickable="true"
-            android:contentDescription="@string/app_name"
-            android:dropDownVerticalOffset="48dp"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="@+id/textView32"
-            app:layout_constraintEnd_toEndOf="@+id/view10"
+            android:layout_height="60dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeWidth="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView22"
+            app:layout_constraintEnd_toEndOf="@+id/switchCompat2"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView32"
-            app:layout_constraintTop_toTopOf="@+id/textView32" />
+            app:layout_constraintStart_toEndOf="@+id/textView22"
+            app:layout_constraintTop_toTopOf="@+id/textView22">
 
-        <Spinner
-            android:id="@+id/spinner8"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/settings_spinner_selector_background"
-            android:clickable="true"
-            android:contentDescription="@string/app_name"
-            android:dropDownVerticalOffset="48dp"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="@+id/textView34"
-            app:layout_constraintEnd_toEndOf="@+id/spinner9"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView34"
-            app:layout_constraintTop_toTopOf="@+id/textView34" />
-
-        <Spinner
-            android:id="@+id/spinner9"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/settings_spinner_selector_background"
-            android:clickable="true"
-            android:contentDescription="@string/app_name"
-            android:dropDownVerticalOffset="48dp"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="@+id/textView33"
-            app:layout_constraintEnd_toEndOf="@+id/spinner7"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView33"
-            app:layout_constraintTop_toTopOf="@+id/textView33" />
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/app_name"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

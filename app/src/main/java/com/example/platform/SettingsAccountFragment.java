@@ -63,12 +63,6 @@ public class SettingsAccountFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View  view =  inflater.inflate(R.layout.fragment_settings_account, container, false);
-        Spinner spinner = view.findViewById(R.id.spinner);
-
-        String[] items = {"mahmoud","mahoumd","sdfasdf"};
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,items);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-        spinner.setAdapter(arrayAdapter);
         return view;
     }
 }

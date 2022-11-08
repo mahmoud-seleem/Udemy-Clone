@@ -7,16 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.Spinner;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link settingsAccessibilityFragment#newInstance} factory method to
+ * Use the {@link SettingsPreferencesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class settingsAccessibilityFragment extends Fragment {
+public class SettingsPreferencesFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +24,7 @@ public class settingsAccessibilityFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public settingsAccessibilityFragment() {
+    public SettingsPreferencesFragment() {
         // Required empty public constructor
     }
 
@@ -37,11 +34,11 @@ public class settingsAccessibilityFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment settingsAccessibilityFragment.
+     * @return A new instance of fragment SettingsPreferencesFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static settingsAccessibilityFragment newInstance(String param1, String param2) {
-        settingsAccessibilityFragment fragment = new settingsAccessibilityFragment();
+    public static SettingsPreferencesFragment newInstance(String param1, String param2) {
+        SettingsPreferencesFragment fragment = new SettingsPreferencesFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,11 +58,7 @@ public class settingsAccessibilityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View  view =  inflater.inflate(R.layout.fragment_settings_accessibility, container, false);
-        AutoCompleteTextView spinner = view.findViewById(R.id.auto);
-        String[] items = {"mahmoud","mahoumd","sdfasdf"};
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,items);
-        spinner.setAdapter(arrayAdapter);
-        return view;
-     }
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_settings_preferences, container, false);
+    }
 }
