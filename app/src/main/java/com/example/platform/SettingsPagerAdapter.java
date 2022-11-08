@@ -7,13 +7,17 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 public class SettingsPagerAdapter extends FragmentStateAdapter {
 
+    Fragment[] fragments = new Fragment[3];
     public SettingsPagerAdapter(FragmentActivity activity){
         super(activity);
+        fragments[0] = new SettingsAccountFragment();
+        fragments[1] = new settingsAccessibilityFragment();
+        fragments[2] = new SettingsAccountFragment();
     }
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        return new SettingsAccountFragment();
+        return fragments[position];
     }
 
     @Override
