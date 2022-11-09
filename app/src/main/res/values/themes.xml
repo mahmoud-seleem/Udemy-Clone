@@ -91,10 +91,9 @@
             0.01
         </item>
 
-        <item name="android:textColor">
-            #2B2B43
-        </item>
+        <item name="android:textColor">#2B2B43</item>
 
     </style>
+    
 
 </resources>
