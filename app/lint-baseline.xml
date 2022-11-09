@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<issues format="6" by="lint 7.3.1" type="baseline" client="gradle" dependencies="false" name="AGP (7.3.1)" variant="all" version="7.3.1">
+<issues format="6" by="lint 7.2.2" type="baseline" client="gradle" dependencies="false" name="AGP (7.2.2)" variant="all" version="7.2.2">
 
     <issue
         id="ObsoleteSdkInt"
-        message="Unnecessary; SDK_INT is always >= 21"
-        errorLine1="        &lt;item name=&quot;android:statusBarColor&quot; tools:targetApi=&quot;l&quot;>?attr/colorPrimaryVariant&lt;/item>"
-        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~">
+        message="This folder configuration (`v21`) is unnecessary; `minSdkVersion` is 21. Merge all the resources in this folder into `values`.">
         <location
-            file="src/main/res/values-night/themes.xml"
-            line="13"
-            column="45"/>
+            file="src/main/res/values-v21"/>
     </issue>
 
     <issue
@@ -21,6 +17,17 @@
             file="src/main/res/drawable/ic_android_black_24dp.xml"
             line="1"
             column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.SignActivity_email_hint` appears to be unused"
+        errorLine1="    &lt;style name=&quot;SignActivity_email_hint&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="54"
+            column="12"/>
     </issue>
 
 </issues>

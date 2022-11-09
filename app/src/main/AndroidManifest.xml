@@ -15,14 +15,16 @@
         tools:targetApi="31">
         <activity
             android:name="com.example.platform.ArticleActivity"
-            android:exported="false">
+            android:exported="false"
+            android:configChanges="orientation|screenSize">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name="com.example.platform.SignActivity"
-            android:exported="false">
+            android:exported="false"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

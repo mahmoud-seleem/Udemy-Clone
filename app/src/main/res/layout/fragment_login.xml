@@ -10,50 +10,51 @@
         android:id="@+id/login"
         android:layout_width="350dp"
         android:layout_height="82dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="164dp"
+        android:gravity="top"
+        android:lineSpacingExtra="0sp"
         android:text="@string/SignActivity_login"
         android:textAppearance="@style/SignActivity_login_text"
-        android:lineSpacingExtra="0sp"
-        android:translationY="-0.08sp"
-        android:gravity="top" />
+        android:translationY="-0.08sp" />
 
     <!-- Sign in with your data that you entered during your registration. -->
     <TextView
         android:id="@+id/sign_in_wit"
         android:layout_width="350dp"
         android:layout_height="40dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="93dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="262dp"
+        android:gravity="top"
+        android:lineSpacingExtra="1sp"
         android:text="@string/SignActivity_sign_in_wit"
         android:textAppearance="@style/SignActivity_sign_in_wit"
-        android:lineSpacingExtra="1sp"
-        android:translationY="-0.45sp"
-        android:gravity="top" />
+        android:translationY="-0.45sp" />
 
 
     <RelativeLayout
         android:id="@+id/email_layout"
         android:layout_width="350dp"
         android:layout_height="84dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="150dp">
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="334dp">
 
         <TextView
             android:id="@+id/email_label"
             android:layout_width="0dp"
             android:layout_height="16dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:text="@string/SignActivity_email"
-            android:textAppearance="@style/SignActivity_email_text"
+            android:layout_alignParentEnd="true"
+            android:gravity="top"
             android:lineSpacingExtra="0sp"
-            android:gravity="top" />
+            android:text="@string/SignActivity_email"
+            android:textAppearance="@style/SignActivity_email_text" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/box"
             android:gravity="center_vertical"
             android:hint="@string/SignActivity_email_hint"
             android:importantForAutofill="no"
@@ -68,20 +69,20 @@
         android:id="@+id/password_layout"
         android:layout_width="350dp"
         android:layout_height="84dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="242dp">
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="426dp">
 
         <TextView
             android:id="@+id/password_label"
             android:layout_width="0dp"
             android:layout_height="16dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:text="@string/SignActivity_password"
-            android:textAppearance="@style/SignActivity_email_text"
+            android:layout_alignParentEnd="true"
+            android:gravity="top"
             android:lineSpacingExtra="0sp"
-            android:gravity="top" />
+            android:text="@string/SignActivity_password"
+            android:textAppearance="@style/SignActivity_email_text" />
 
         <EditText
             android:layout_width="match_parent"
@@ -92,8 +93,42 @@
             android:inputType="textPassword"
             android:labelFor="@id/password_label"
             android:textColorHint="#757575"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            tools:ignore="DuplicateSpeakableTextCheck"
+            android:background="@drawable/box" />
 
     </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="518dp"
+        android:text="@string/SignActivity_keep_login"
+        android:textAppearance="@style/checkbox"
+        android:lineSpacingExtra="1sp"
+        android:translationY="-0.45sp" />
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="578dp"
+        android:background="@drawable/sign_activity_login_button"
+        android:text="@string/SignActivity_login" />
+
+    <!-- Don’t have an account? Sign up -->
+    <TextView
+        android:id="@+id/dont_have_"
+        android:layout_width="350dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="756dp"
+        android:lineSpacingExtra="-2sp"
+        android:textAlignment="center"
+        android:text="@string/SignActivity_dont_have_account"
+        android:textAppearance="@style/SignActivity_dont_have_account" />
+
 
 </FrameLayout>
