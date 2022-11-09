@@ -1,15 +1,25 @@
 package com.example.platform;
 
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Spinner;
+import android.widget.TextView;
+
+import com.google.android.material.textfield.MaterialAutoCompleteTextView;
+import com.google.android.material.textfield.TextInputLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,10 +72,14 @@ public class settingsAccessibilityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View  view =  inflater.inflate(R.layout.fragment_settings_accessibility, container, false);
-        AutoCompleteTextView spinner = view.findViewById(R.id.auto);
-        String[] items = {"mahmoud","mahoumd","sdfasdf"};
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,items);
-        spinner.setAdapter(arrayAdapter);
+//        MaterialAutoCompleteTextView spinner = view.findViewById(R.id.auto);
+//        TextInputLayout textInputLayout = view.findViewById(R.id.text_input_layout);
+//        String[] items = {"mahmoud","mohamed","seleem"};
+//        CustomSpinner spinner1 = view.findViewById(R.id.spinner1);
+//        ConstraintLayout layout = view.findViewById(R.id.constraint);
+//        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,items);
+//        spinner.setAdapter(arrayAdapter);
         return view;
      }
 }
+//                spinner1.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.temp));

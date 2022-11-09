@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="false" android:state_window_focused="false">
+    <item  android:state_window_focused="false">
         <layer-list>
             <item>
                 <shape android:shape="rectangle">
@@ -17,21 +17,8 @@
 
         </layer-list>
     </item>
-    <item android:state_enabled="true" android:state_window_focused="true">
-        <layer-list>
-            <item>
-                <shape android:shape="rectangle">
-                    <corners android:radius="8dp" />
-                    <size android:width="200dp" android:height="48dp" />
-                    <stroke android:width="2dp" android:color="@color/dark_gray" />
-                </shape>
-            </item>
-            <item
-                android:width="48dp"
-                android:drawable="@drawable/settings_spinner_down_icon"
-                android:gravity="end">
-            </item>
-        </layer-list>
+    <item  android:state_window_focused="true">
+
 
     </item>
 
