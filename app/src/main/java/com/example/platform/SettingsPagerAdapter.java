@@ -12,7 +12,7 @@ public class SettingsPagerAdapter extends FragmentStateAdapter {
         super(activity);
         fragments[0] = new SettingsAccountFragment();
         fragments[1] = new settingsAccessibilityFragment();
-        fragments[2] = new SettingsAccountFragment();
+        fragments[2] = new SettingsPreferencesFragment();
     }
     @NonNull
     @Override

@@ -1,21 +1,8 @@
 <resources>
     <!-- Base application theme. -->
     <style name="Theme.Platform" parent="Theme.Material3.Light.NoActionBar">
-        <!-- Primary brand color. -->
         <item name="colorPrimary">@color/blue</item>
-        <item name="colorPrimaryVariant">@color/blue</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/blue</item>
-        <item name="colorSecondaryVariant">@color/blue</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <item name="colorAccent">@color/blue</item>
-
-        <!-- Status bar color. -->
-        <!-- Customize your theme here. -->
     </style>
-
-
     <style name="Font_style">
         <item name="fontFamily">sans-serif-condensed-light</item>
         <item name="android:textStyle">bold</item>
