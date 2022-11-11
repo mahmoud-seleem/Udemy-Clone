@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Platform" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/blue</item>
+        <item name="colorSecondary">@color/blue</item>
     </style>
     <style name="Font_style">
         <item name="fontFamily">sans-serif-condensed-light</item>

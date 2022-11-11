@@ -1,12 +1,14 @@
 package com.example.platform;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+
+import com.google.android.material.card.MaterialCardView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +61,57 @@ public class SettingsPreferencesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_settings_preferences, container, false);
+        View view = inflater.inflate(R.layout.fragment_settings_preferences, container, false);
+        MaterialCardView card1 = view.findViewById(R.id.card1);
+        MaterialCardView card2 = view.findViewById(R.id.card2);
+        MaterialCardView card3 = view.findViewById(R.id.card3);
+        card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                card1.setChecked(!card1.isChecked());
+                if (card1.isChecked()) {
+                    card1.setStrokeColor(ContextCompat.getColor(getContext(), R.color.blue));
+                    card2.setChecked(false);
+                    card2.setStrokeColor(ContextCompat.getColor(getContext(), R.color.gray_blue));
+                    card3.setChecked(false);
+                    card3.setStrokeColor(ContextCompat.getColor(getContext(), R.color.gray_blue));
+                } else {
+                    card1.setStrokeColor(ContextCompat.getColor(getContext(), R.color.gray_blue));
+                }
+            }
+        });
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                card2.setChecked(!card2.isChecked());
+                if (card2.isChecked()) {
+                    card2.setStrokeColor(ContextCompat.getColor(getContext(), R.color.blue));
+                    card1.setChecked(false);
+                    card1.setStrokeColor(ContextCompat.getColor(getContext(), R.color.gray_blue));
+                    card3.setChecked(false);
+                    card3.setStrokeColor(ContextCompat.getColor(getContext(), R.color.gray_blue));
+                } else {
+                    card2.setStrokeColor(ContextCompat.getColor(getContext(), R.color.gray_blue));
+                }
+            }
+        });
+
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                card3.setChecked(!card3.isChecked());
+                if (card3.isChecked()) {
+                    card3.setStrokeColor(ContextCompat.getColor(getContext(), R.color.blue));
+                    card2.setChecked(false);
+                    card2.setStrokeColor(ContextCompat.getColor(getContext(), R.color.gray_blue));
+                    card1.setChecked(false);
+                    card1.setStrokeColor(ContextCompat.getColor(getContext(), R.color.gray_blue));
+                }
+                else {
+                    card3.setStrokeColor(ContextCompat.getColor(getContext(),R.color.gray_blue));
+                }
+            }
+        });
+        return view;
     }
 }
