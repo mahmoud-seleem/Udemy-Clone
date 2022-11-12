@@ -14,6 +14,10 @@ public class SettingsPagerAdapter extends FragmentStateAdapter {
         fragments[1] = new settingsAccessibilityFragment();
         fragments[2] = new SettingsPreferencesFragment();
     }
+    public SettingsPagerAdapter(FragmentActivity activity,Fragment[] fragments){
+        super(activity);
+        this.fragments = fragments;
+    }
     @NonNull
     @Override
     public Fragment createFragment(int position) {

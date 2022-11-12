@@ -1,14 +1,20 @@
 package com.example.platform;
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 
 /**
@@ -58,6 +64,7 @@ public class SettingsAccountFragment extends Fragment {
         }
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -68,6 +75,30 @@ public class SettingsAccountFragment extends Fragment {
         String[] items = {"mahmoud","mohamed","seleem"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1,items);
         spinner.setAdapter(adapter);
+        MyConstraintLayout constraintLayout = view.findViewById(R.id.parent);
+        constraintLayout.getaAllEditTexts(constraintLayout);
+        //View view2 = view.findViewById(R.id.view2);
+        //ConstraintLayout constraintLayout = view.findViewById(R.id.parent);
+        //EditText editText = view.findViewById(R.id.editTextTextPersonName);
+//        view2.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                View currentFocus = getActivity().getCurrentFocus();
+//                if (!(currentFocus instanceof EditText)) {
+//                    if(currentFocus != null){
+//                    System.out.println(currentFocus.getClass().getName());
+////                        editText.setCursorVisible(false);
+//                }else {
+//                        System.out.println("nullllllllllllllllllllllllllllllllll");
+//                    }
+//                    editText.setBackgroundColor(Color.parseColor("#000000"));
+//                    editText.clearFocus();
+//                }else {
+//                    System.out.println("editttttttttttttttttttttttttttttttttttt");
+//                }
+//                return true;
+//            }
+//        });
         return view;
     }
 }

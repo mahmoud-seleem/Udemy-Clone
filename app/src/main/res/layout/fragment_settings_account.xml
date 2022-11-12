@@ -9,11 +9,16 @@
     android:contentDescription="@string/app_name"
     tools:context=".SettingsAccountFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.example.platform.MyConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
         <View
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:id="@+id/view2"
             android:layout_width="0dp"
             android:layout_height="250dp"
@@ -352,6 +357,6 @@
                 android:hint="@string/app_name"
                 android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.example.platform.MyConstraintLayout>
 
 </ScrollView>
