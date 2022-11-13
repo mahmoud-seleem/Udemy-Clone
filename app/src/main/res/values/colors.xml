@@ -12,4 +12,13 @@
     <color name="light_gray">#F4F4F4</color>
     <color name="darker_gray">#545563</color>
     <color name="gray_blue">#C9CACD</color>
+    <color name="primaryColor">#4e60ff</color>
+    <color name="primaryLightColor">#8c8dff</color>
+    <color name="primaryDarkColor">#0036cb</color>
+    <color name="secondaryColor">#f4f4f4</color>
+    <color name="secondaryLightColor">#ffffff</color>
+    <color name="secondaryDarkColor">#c1c1c1</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#2B2B43</color>
+    <color name="ErrorColor">#B00020</color>
 </resources>

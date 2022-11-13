@@ -92,7 +92,6 @@ public class MyConstraintLayout extends ConstraintLayout {
                         inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
                     }
                     editText.clearFocus();
-
                 }
                 break;
             }

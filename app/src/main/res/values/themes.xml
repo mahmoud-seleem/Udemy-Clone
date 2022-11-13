@@ -1,13 +1,23 @@
 <resources>
     <!-- Base application theme. -->
     <style name="Theme.Platform" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">@color/blue</item>
-        <item name="colorSecondary">@color/blue</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
+        <item name="background">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnSecondary">@color/secondaryTextColor</item>
+        <item name="colorOnSurface">@color/secondaryTextColor</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorError">@color/ErrorColor</item>
     </style>
+
+
     <style name="Font_style">
         <item name="fontFamily">sans-serif-condensed-light</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">24sp</item>
     </style>
 </resources>

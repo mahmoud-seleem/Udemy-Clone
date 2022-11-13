@@ -10,15 +10,13 @@
     tools:context=".SettingsAccountFragment">
 
     <com.example.platform.MyConstraintLayout
+        android:id="@+id/parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/parent"
         android:focusable="true"
         android:focusableInTouchMode="true">
 
         <View
-            android:focusable="true"
-            android:focusableInTouchMode="true"
             android:id="@+id/view2"
             android:layout_width="0dp"
             android:layout_height="250dp"
@@ -26,6 +24,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/settings_blank_view_shape"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -314,7 +314,61 @@
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/settings_date_of_birth"
+            android:textColor="@color/darker_gray"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView13"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@string/settings_date_of_birth"
+            android:textColor="@color/darker_gray"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="64dp"
+            android:background="@drawable/settings_blank_edit_text_selector_background"
+            app:layout_constraintDimensionRatio=""
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toEndOf="@+id/cardView2"
+            app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+            <com.hbb20.CountryCodePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editText_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="username"
+                android:ems="10"
+                android:hint="@string/settings_user_name"
+                android:inputType="phone"
+                android:minHeight="48dp"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -352,6 +406,31 @@
 
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
                 android:id="@+id/auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/app_name"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout2"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/blue"
+            app:boxStrokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="@+id/textView36"
+            app:layout_constraintTop_toBottomOf="@+id/textView36">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/auto2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/app_name"

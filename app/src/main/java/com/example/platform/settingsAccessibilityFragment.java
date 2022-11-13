@@ -83,7 +83,8 @@ public class settingsAccessibilityFragment extends Fragment {
 //        ConstraintLayout layout = view.findViewById(R.id.constraint);
 //        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,items);
 //        spinner.setAdapter(arrayAdapter);
-
+        MyConstraintLayout constraintLayout = view.findViewById(R.id.constraint);
+        constraintLayout.getaAllEditTexts(constraintLayout);
         return view;
      }
 }

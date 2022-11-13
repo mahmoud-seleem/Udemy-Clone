@@ -7,9 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".SettingsPreferencesFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.example.platform.MyConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/parentx">
 
 
         <androidx.cardview.widget.CardView
@@ -27,10 +28,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <com.example.platform.MyConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:id="@+id/parent1">
 
                 <TextView
                     android:id="@+id/textView"
@@ -160,7 +162,7 @@
                     app:checkedIconMargin="15dp"
                     app:layout_constraintBottom_toBottomOf="@+id/card2"
                     app:layout_constraintDimensionRatio="1.4:1"
-                    app:layout_constraintEnd_toStartOf="@id/view3"
+                    app:layout_constraintEnd_toStartOf="@id/helper1"
                     app:layout_constraintHorizontal_bias="0.8"
                     app:layout_constraintStart_toEndOf="@+id/card2"
                     app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -179,7 +181,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <View
-                    android:id="@+id/view3"
+                    android:id="@+id/helper1"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -189,36 +191,680 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0"
                     tools:visibility="invisible" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.example.platform.MyConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/view3"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/light_gray"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view2">
+
+            <com.example.platform.MyConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:id="@+id/parent2">
+
+                <TextView
+                    android:id="@+id/textView_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_profile_info"
+                    android:textColor="@color/blue"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView1_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_first_name"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@id/card1_2"
+                    app:layout_constraintStart_toStartOf="@id/card1_2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_2"
+                    app:layout_constraintVertical_bias="0.8" />
+
+                <TextView
+                    android:id="@+id/textview3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_first_name"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="16sp"
+
+                    app:layout_constraintBottom_toTopOf="@+id/card2_2"
+                    app:layout_constraintStart_toStartOf="@id/card2_2"
+
+                    app:layout_constraintTop_toBottomOf="@+id/textView_2"
+                    app:layout_constraintVertical_bias="0.8" />
+
+                <TextView
+                    android:id="@+id/textView3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_first_name"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/card3_2"
+                    app:layout_constraintStart_toStartOf="@+id/card3_2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_2"
+                    app:layout_constraintVertical_bias="0.8" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card1_2"
+
+                    style="@style/Widget.Material3.CardView.Elevated"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="64dp"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:elevation="10dp"
+                    android:focusable="true"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="4dp"
+                    app:checkedIconMargin="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1.4:1"
+                    app:layout_constraintEnd_toStartOf="@id/card2_2"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="@id/textView_2"
+                    app:layout_constraintTop_toBottomOf="@id/textView_2"
+                    app:rippleColor="@color/light_gray"
+                    app:strokeColor="@color/gray_blue"
+                    app:strokeWidth="3dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card2_2"
+                    style="@style/Widget.Material3.CardView.Elevated"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="64dp"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="4dp"
+                    app:checkedIconMargin="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card1_2"
+                    app:layout_constraintDimensionRatio="1.4:1"
+                    app:layout_constraintEnd_toStartOf="@id/card3_2"
+                    app:layout_constraintHorizontal_bias="0.7"
+                    app:layout_constraintStart_toEndOf="@+id/card1_2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_2"
+                    app:layout_constraintTop_toTopOf="@id/card1_2"
+                    app:rippleColor="@color/light_gray"
+                    app:strokeColor="@color/gray_blue"
+                    app:strokeWidth="3dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card3_2"
+                    style="@style/Widget.Material3.CardView.Elevated"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="4dp"
+                    app:checkedIconMargin="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card2_2"
+                    app:layout_constraintDimensionRatio="1.4:1"
+                    app:layout_constraintEnd_toStartOf="@id/helper2"
+                    app:layout_constraintHorizontal_bias="0.8"
+                    app:layout_constraintStart_toEndOf="@+id/card2_2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_2"
+                    app:layout_constraintTop_toTopOf="@id/card2_2"
+                    app:rippleColor="@color/light_gray"
+                    app:strokeColor="@color/gray_blue"
+                    app:strokeWidth="3dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <View
+                    android:id="@+id/helper2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@id/card3_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:visibility="invisible" />
+            </com.example.platform.MyConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/text_prefernces_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/light_gray"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view2"
-            android:background="@drawable/settings_blank_edit_text_selector_background">
+            app:layout_constraintTop_toBottomOf="@id/view3">
 
-            <com.hbb20.CountryCodePicker
-                android:id="@+id/ccp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:ccp_countryPreference="us,in"
-                />
-
-            <EditText
-                android:id="@+id/editText_carrierNumber"
+            <com.example.platform.MyConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/app_name"
-                android:inputType="phone"
-                android:autofillHints="phone"
-                android:singleLine="true"/>
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:id="@+id/parent3">
+
+                <TextView
+                    android:id="@+id/textView_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_profile_info"
+                    android:textColor="@color/blue"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView_1_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_first_name"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@id/text_input_layout1"
+                    app:layout_constraintStart_toStartOf="@id/text_input_layout1"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_4"
+                    app:layout_constraintVertical_bias="0.8" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/textView_2_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_first_name"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@id/text_input_layout1"
+                    app:layout_constraintStart_toStartOf="@id/text_input_layout2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_4"
+                    app:layout_constraintVertical_bias="0.8" />
+
+                <TextView
+                    android:id="@+id/textView_3_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_first_name"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@id/text_input_layout1"
+                    app:layout_constraintStart_toStartOf="@id/text_input_layout3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_4"
+                    app:layout_constraintVertical_bias="0.8" />
+
+                <TextView
+                    android:id="@+id/textView_4_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_first_name"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@id/text_input_layout4"
+                    app:layout_constraintStart_toStartOf="@id/text_input_layout4"
+                    app:layout_constraintTop_toBottomOf="@+id/text_input_layout1"
+                    app:layout_constraintVertical_bias="0.8" />
+                <TextView
+                    android:id="@+id/textView_5_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_first_name"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@id/text_input_layout4"
+                    app:layout_constraintStart_toStartOf="@id/text_input_layout5"
+                    app:layout_constraintTop_toBottomOf="@+id/text_input_layout1"
+                    app:layout_constraintVertical_bias="0.8" />
+                <TextView
+                    android:id="@+id/textView_6_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_first_name"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@id/text_input_layout4"
+                    app:layout_constraintStart_toStartOf="@id/text_input_layout6"
+                    app:layout_constraintTop_toBottomOf="@+id/text_input_layout1"
+                    app:layout_constraintVertical_bias="0.8" />
+                <TextView
+                    android:id="@+id/textView_7_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_first_name"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@id/text_input_layout7"
+                    app:layout_constraintStart_toStartOf="@id/text_input_layout7"
+                    app:layout_constraintTop_toBottomOf="@+id/text_input_layout4"
+                    app:layout_constraintVertical_bias="0.8" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout1"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="64dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/blue"
+                    app:boxStrokeWidth="2dp"
+                    app:layout_constraintBottom_toTopOf="@id/text_input_layout4"
+                    app:layout_constraintDimensionRatio="3:1"
+                    app:layout_constraintEnd_toStartOf="@id/text_input_layout2"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="@id/textView_4"
+                    app:layout_constraintTop_toBottomOf="@id/textView_4">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/auto1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/app_name"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout2"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="64dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/blue"
+                    app:boxStrokeWidth="2dp"
+                    app:layout_constraintBottom_toBottomOf="@id/text_input_layout1"
+                    app:layout_constraintDimensionRatio="3:1"
+                    app:layout_constraintEnd_toStartOf="@id/text_input_layout3"
+                    app:layout_constraintStart_toEndOf="@id/text_input_layout1"
+                    app:layout_constraintTop_toTopOf="@id/text_input_layout1">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/auto2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/app_name"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout3"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/blue"
+                    app:boxStrokeWidth="2dp"
+                    app:layout_constraintBottom_toBottomOf="@id/text_input_layout1"
+                    app:layout_constraintDimensionRatio="3:1"
+                    app:layout_constraintEnd_toStartOf="@id/helper4"
+                    app:layout_constraintStart_toEndOf="@id/text_input_layout2"
+                    app:layout_constraintTop_toTopOf="@id/text_input_layout1">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/auto3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/app_name"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout4"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="64dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/blue"
+                    app:boxStrokeWidth="2dp"
+                    app:layout_constraintBottom_toTopOf="@id/text_input_layout7"
+                    app:layout_constraintDimensionRatio="3:1"
+                    app:layout_constraintEnd_toStartOf="@id/text_input_layout5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="@+id/text_input_layout1"
+                    app:layout_constraintTop_toBottomOf="@+id/text_input_layout1">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/auto4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/app_name"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout5"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="64dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/blue"
+                    app:boxStrokeWidth="2dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_input_layout4"
+                    app:layout_constraintDimensionRatio="3:1"
+                    app:layout_constraintEnd_toStartOf="@id/text_input_layout6"
+                    app:layout_constraintStart_toEndOf="@+id/text_input_layout4"
+                    app:layout_constraintTop_toTopOf="@+id/text_input_layout4">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/auto5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/app_name"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout6"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/blue"
+                    app:boxStrokeWidth="2dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_input_layout5"
+                    app:layout_constraintDimensionRatio="3:1"
+                    app:layout_constraintEnd_toEndOf="@+id/text_input_layout3"
+                    app:layout_constraintStart_toEndOf="@+id/text_input_layout5">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/auto6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/app_name"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout7"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="64dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/blue"
+                    app:boxStrokeWidth="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="3:1"
+                    app:layout_constraintEnd_toEndOf="@+id/text_input_layout4"
+                    app:layout_constraintStart_toStartOf="@+id/text_input_layout4"
+                    app:layout_constraintTop_toBottomOf="@+id/text_input_layout4">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/auto7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/app_name"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:id="@+id/helper4"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/text_input_layout3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:visibility="invisible" />
+            </com.example.platform.MyConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/view4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/light_gray"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_prefernces_card">
+
+            <com.example.platform.MyConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:id="@+id/parent4">
+
+                <TextView
+                    android:id="@+id/textView_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_profile_info"
+                    android:textColor="@color/blue"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView1_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_first_name"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@id/card1_3"
+                    app:layout_constraintStart_toStartOf="@id/card1_3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_3"
+                    app:layout_constraintVertical_bias="0.8" />
+
+                <TextView
+                    android:id="@+id/textview3_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_first_name"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="16sp"
+
+                    app:layout_constraintBottom_toTopOf="@+id/card2_3"
+                    app:layout_constraintStart_toStartOf="@id/card2_3"
+
+                    app:layout_constraintTop_toBottomOf="@+id/textView_3"
+                    app:layout_constraintVertical_bias="0.8" />
+
+                <TextView
+                    android:id="@+id/textView3_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_first_name"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="16sp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toTopOf="@+id/card3_3"
+                    app:layout_constraintStart_toStartOf="@+id/card3_3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_3"
+                    app:layout_constraintVertical_bias="0.8" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card1_3"
+
+                    style="@style/Widget.Material3.CardView.Elevated"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="64dp"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:elevation="10dp"
+                    android:focusable="true"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="4dp"
+                    app:checkedIconMargin="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1.4:1"
+                    app:layout_constraintEnd_toStartOf="@id/card2_3"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="@id/textView_3"
+                    app:layout_constraintTop_toBottomOf="@id/textView_3"
+                    app:rippleColor="@color/light_gray"
+                    app:strokeColor="@color/gray_blue"
+                    app:strokeWidth="3dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card2_3"
+                    style="@style/Widget.Material3.CardView.Elevated"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="64dp"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="4dp"
+                    app:checkedIconMargin="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card1_3"
+                    app:layout_constraintDimensionRatio="1.4:1"
+                    app:layout_constraintEnd_toStartOf="@id/card3_3"
+                    app:layout_constraintHorizontal_bias="0.7"
+                    app:layout_constraintStart_toEndOf="@+id/card1_3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_3"
+                    app:layout_constraintTop_toTopOf="@id/card1_3"
+                    app:rippleColor="@color/light_gray"
+                    app:strokeColor="@color/gray_blue"
+                    app:strokeWidth="3dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card3_3"
+                    style="@style/Widget.Material3.CardView.Elevated"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="invisible"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="4dp"
+                    app:checkedIconMargin="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card2_3"
+                    app:layout_constraintDimensionRatio="1.4:1"
+                    app:layout_constraintEnd_toStartOf="@id/helper3"
+                    app:layout_constraintHorizontal_bias="0.8"
+                    app:layout_constraintStart_toEndOf="@+id/card2_3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_3"
+                    app:layout_constraintTop_toTopOf="@id/card2_3"
+                    app:rippleColor="@color/light_gray"
+                    app:strokeColor="@color/gray_blue"
+                    app:strokeWidth="3dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <View
+                    android:id="@+id/helper3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@id/card3_3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:visibility="invisible" />
+            </com.example.platform.MyConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </com.example.platform.MyConstraintLayout>
 </ScrollView>

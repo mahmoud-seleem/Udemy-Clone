@@ -24,11 +24,11 @@
 
     <TextView
         android:id="@+id/settings_toolbar_textView"
-        style="@style/Font_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="@string/settings_toolbar_title"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/settings_toolbar_backImageView"
         app:layout_constraintStart_toEndOf="@id/settings_toolbar_backImageView"
         app:layout_constraintTop_toTopOf="@+id/settings_toolbar_backImageView" />
