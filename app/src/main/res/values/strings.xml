@@ -9,5 +9,7 @@
     <string name="SignActivity_password_hint">min. 8 characters</string>
     <string name="switch_label">enabled</string>
     <string name="SignActivity_keep_login">Keep me logged in</string>
-    <string name="SignActivity_dont_have_account">Don’t have an account? Sign up</string>
+    <string name="SignActivity_dont_have_account">Don’t have an account? </string>
+    <string name="SignActivity_sign_up">Sign Up</string>
+    <string name="SignActivity_forgot_password">Forgot password</string>
 </resources>

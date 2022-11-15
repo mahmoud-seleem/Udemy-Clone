@@ -2,14 +2,14 @@
 <issues format="6" by="lint 7.2.2" type="baseline" client="gradle" dependencies="false" name="AGP (7.2.2)" variant="all" version="7.2.2">
 
     <issue
-        id="VectorRaster"
-        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
-        errorLine1="    android:width=&quot;784dp&quot;"
-        errorLine2="                   ~~~~~">
+        id="OnClick"
+        message="Corresponding method handler &apos;`public void switchToSignUp(android.view.View)`&apos; not found"
+        errorLine1="        android:onClick=&quot;switchToSignUp&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="src/main/res/drawable/sign_activity_blue_layout.xml"
-            line="3"
-            column="20"/>
+            file="src/main/res/layout/fragment_login.xml"
+            line="152"
+            column="9"/>
     </issue>
 
     <issue
@@ -32,6 +32,17 @@
             file="build.gradle"
             line="46"
             column="31"/>
+    </issue>
+
+    <issue
+        id="UsingOnClickInXml"
+        message="Use databinding or explicit wiring of click listener in code"
+        errorLine1="        android:onClick=&quot;switchToSignUp&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_login.xml"
+            line="152"
+            column="9"/>
     </issue>
 
     <issue

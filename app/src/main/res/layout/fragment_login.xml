@@ -124,6 +124,20 @@
         android:background="@drawable/sign_activity_login_button"
         android:text="@string/SignActivity_login" />
 
+    <Button
+        android:id="@+id/forgot_password_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="239dp"
+        android:layout_marginTop="626dp"
+        android:lineSpacingExtra="-2sp"
+        android:text="@string/SignActivity_forgot_password"
+        android:textAlignment="center"
+        android:textAppearance="@style/borderless_button"
+        android:textColor="#4E60FF"
+        android:onClick="forgotPasswordAction" />
+
 
     <!-- Don’t have an account? Sign up -->
     <TextView
@@ -136,6 +150,20 @@
         android:textAlignment="center"
         android:text="@string/SignActivity_dont_have_account"
         android:textAppearance="@style/SignActivity_dont_have_account" />
+
+    <Button
+        android:id="@+id/sign_up_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="743dp"
+        android:lineSpacingExtra="-2sp"
+        android:text="@string/SignActivity_sign_up"
+        android:textAlignment="center"
+        android:textAppearance="@style/borderless_button"
+        android:textColor="#4E60FF"
+        android:onClick="switchToSignUp" />
 
 
 </FrameLayout>

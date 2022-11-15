@@ -1,6 +1,7 @@
 package com.example.platform;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,5 +15,13 @@ public class SignActivity extends AppCompatActivity {
 //        to be implemented
 //        OrientationEventListener.onOrientationChanged()
 
+    }
+
+    //modified later to event listeners
+    public void switchToSignUp(View view) {
+
+    }
+
+    public void forgotPasswordAction(View view) {
     }
 }
