@@ -9,10 +9,16 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/loginFragmentContainerView"
         android:name="com.example.platform.LoginFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         tools:layout="@layout/fragment_login" />
 
-    
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/design_default_color_primary">
+
+    </RelativeLayout>
 </LinearLayout>
