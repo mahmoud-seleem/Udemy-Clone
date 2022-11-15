@@ -12,4 +12,5 @@
     <string name="SignActivity_dont_have_account">Don’t have an account? </string>
     <string name="SignActivity_sign_up">Sign Up</string>
     <string name="SignActivity_forgot_password">Forgot password</string>
+    <string name="AccessibilityImportance_img_description">A Girl reviewing her lessons using her laptop.</string>
 </resources>

@@ -130,7 +130,7 @@
         android:layout_width="200dp"
         android:layout_height="48dp"
         android:layout_marginStart="239dp"
-        android:layout_marginTop="626dp"
+        android:layout_marginTop="632dp"
         android:lineSpacingExtra="-2sp"
         android:text="@string/SignActivity_forgot_password"
         android:textAlignment="center"
