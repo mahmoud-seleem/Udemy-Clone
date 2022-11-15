@@ -4,21 +4,10 @@
     <issue
         id="VectorRaster"
         message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
-        errorLine1="    android:width=&quot;400dp&quot;"
+        errorLine1="    android:width=&quot;784dp&quot;"
         errorLine2="                   ~~~~~">
         <location
-            file="src/main/res/drawable/box.xml"
-            line="3"
-            column="20"/>
-    </issue>
-
-    <issue
-        id="VectorRaster"
-        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
-        errorLine1="    android:width=&quot;350dp&quot;"
-        errorLine2="                   ~~~~~">
-        <location
-            file="src/main/res/drawable/text_field.xml"
+            file="src/main/res/drawable/sign_activity_blue_layout.xml"
             line="3"
             column="20"/>
     </issue>
@@ -104,17 +93,6 @@
         <location
             file="src/main/res/values/colors.xml"
             line="14"
-            column="12"/>
-    </issue>
-
-    <issue
-        id="UnusedResources"
-        message="The resource `R.color.primaryColor` appears to be unused"
-        errorLine1="    &lt;color name=&quot;primaryColor&quot;>#4e60ff&lt;/color>"
-        errorLine2="           ~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/values/colors.xml"
-            line="15"
             column="12"/>
     </issue>
 

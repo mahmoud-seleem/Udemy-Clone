@@ -1,8 +1,8 @@
 package com.example.platform;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SignActivity extends AppCompatActivity {
 
@@ -10,5 +10,9 @@ public class SignActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign);
+
+//        to be implemented
+//        OrientationEventListener.onOrientationChanged()
+
     }
 }
