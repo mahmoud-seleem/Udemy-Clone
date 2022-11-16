@@ -65,14 +65,16 @@ public class SettingsPreferencesFragment extends Fragment {
         MaterialCardView card1 = view.findViewById(R.id.card1);
         MaterialCardView card2 = view.findViewById(R.id.card2);
         MaterialCardView card3 = view.findViewById(R.id.card3);
-        MyConstraintLayout constraintLayout = view.findViewById(R.id.parentx);
-//        MyConstraintLayout constraintLayout1 = view.findViewById(R.id.parent1);
-//        MyConstraintLayout constraintLayout2 = view.findViewById(R.id.parent2);
-//        MyConstraintLayout constraintLayout3 = view.findViewById(R.id.parent3);
-        constraintLayout.getaAllEditTexts(constraintLayout);
-//        constraintLayout1.getaAllEditTexts(constraintLayout1);
-//        constraintLayout2.getaAllEditTexts(constraintLayout2);
-//        constraintLayout3.getaAllEditTexts(constraintLayout3);
+        MyConstraintLayout constraintLayout3 = view.findViewById(R.id.parent3);
+        MyConstraintLayout parentConstraintLayout = view.findViewById(R.id.parentx);
+        MyConstraintLayout constraintLayout1 = view.findViewById(R.id.parent1);
+        MyConstraintLayout constraintLayout2 = view.findViewById(R.id.parent2);
+        MyConstraintLayout constraintLayout4 = view.findViewById(R.id.parent4);
+        constraintLayout3.getaAllEditTexts(parentConstraintLayout);
+        constraintLayout1.getaAllEditTexts(parentConstraintLayout);
+        constraintLayout2.getaAllEditTexts(parentConstraintLayout);
+        constraintLayout4.getaAllEditTexts(parentConstraintLayout);
+
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
