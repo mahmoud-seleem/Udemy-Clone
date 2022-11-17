@@ -54,16 +54,16 @@
 
         <EditText
             android:id="@+id/email_editbox"
-            android:layout_below="@id/email_label"
             android:layout_width="400dp"
             android:layout_height="48dp"
+            android:layout_below="@id/email_label"
             android:background="@drawable/box"
             android:hint="@string/SignActivity_email_hint"
-            android:paddingStart="18dp"
-            android:paddingEnd="18dp"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
             android:labelFor="@id/email_label"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
             android:textColorHint="#757575" />
 
     </RelativeLayout>
@@ -93,12 +93,12 @@
             android:layout_height="48dp"
             android:layout_below="@id/password_label"
             android:background="@drawable/box"
-            android:paddingStart="18dp"
-            android:paddingEnd="18dp"
             android:hint="@string/SignActivity_password_hint"
             android:importantForAutofill="no"
             android:inputType="textPassword"
             android:labelFor="@id/password_label"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
             android:textColorHint="#757575"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
@@ -111,9 +111,9 @@
         android:layout_gravity="start"
         android:layout_marginStart="165dp"
         android:layout_marginTop="518dp"
+        android:lineSpacingExtra="1sp"
         android:text="@string/SignActivity_keep_login"
         android:textAppearance="@style/checkbox"
-        android:lineSpacingExtra="1sp"
         android:translationY="-0.45sp" />
 
     <Button
@@ -135,8 +135,7 @@
         android:text="@string/SignActivity_forgot_password"
         android:textAlignment="center"
         android:textAppearance="@style/borderless_button"
-        android:textColor="#4E60FF"
-        android:onClick="forgotPasswordAction" />
+        android:textColor="#4E60FF" />
 
 
     <!-- Don’t have an account? Sign up -->
@@ -147,8 +146,8 @@
         android:layout_marginStart="165dp"
         android:layout_marginTop="756dp"
         android:lineSpacingExtra="-2sp"
-        android:textAlignment="center"
         android:text="@string/SignActivity_dont_have_account"
+        android:textAlignment="center"
         android:textAppearance="@style/SignActivity_dont_have_account" />
 
     <Button
@@ -162,8 +161,7 @@
         android:text="@string/SignActivity_sign_up"
         android:textAlignment="center"
         android:textAppearance="@style/borderless_button"
-        android:textColor="#4E60FF"
-        android:onClick="switchToSignUp" />
+        android:textColor="#4E60FF" />
 
 
 </FrameLayout>
