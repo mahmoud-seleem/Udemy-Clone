@@ -20,4 +20,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="login_cards_description">login_cards</string>
     <string name="SignActivity_on_boarding_screens_are_shown">on boarding screens are shown</string>
+    <string name="create_your_account">Create your Account</string>
+    <string name="in_just_a_few_seconds">In just a few seconds</string>
+    <string name="let_s_fill_up_the_basic_info_about_you">Let’s fill up the basic info about you</string>
+    <string name="first_name">First Name</string>
+    <string name="type_your_first_name">Type your first name</string>
+    <string name="second_name">Second Name</string>
+    <string name="type_your_second_name">Type your second name</string>
+    <string name="username">Username</string>
 </resources>
