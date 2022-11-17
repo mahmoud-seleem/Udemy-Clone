@@ -13,4 +13,5 @@
     <string name="SignActivity_sign_up">Sign Up</string>
     <string name="SignActivity_forgot_password">Forgot password</string>
     <string name="AccessibilityImportance_img_description">A Girl reviewing her lessons using her laptop.</string>
+    <string name="SignActivity_card2_world_img_description">Education connects you to the world.</string>
 </resources>

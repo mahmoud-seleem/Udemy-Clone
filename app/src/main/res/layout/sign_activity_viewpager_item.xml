@@ -1,63 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="-24dp"
-        android:elevation="14dp">
 
-        <androidx.cardview.widget.CardView
+    <androidx.cardview.widget.CardView
+        android:layout_width="294dp"
+        android:layout_height="278.88dp"
+        android:layout_marginStart="446dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="80dp">
+
+        <ImageView
+            android:id="@+id/card_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:elevation="8dp"
-            app:cardCornerRadius="80dp">
-
-            <ImageView
-                android:id="@+id/card_image"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/AccessibilityImportance_img_description"
-                android:scaleType="centerCrop"
-                android:src="@drawable/accessibility_importance_img"
-                tools:ignore="ImageContrastCheck" />
+            android:contentDescription="@string/AccessibilityImportance_img_description"
+            android:src="@drawable/accessibility_importance_img"
+            tools:ignore="ImageContrastCheck" />
 
 
-        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="620dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:elevation="8dp"
-            app:cardCornerRadius="80dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="294dp"
+        android:layout_height="278.88dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="294dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="80dp">
 
-            <ImageView
-                android:id="@+id/card_image2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/AccessibilityImportance_img_description"
-                android:scaleType="centerCrop"
-                android:src="@drawable/world" />
+        <ImageView
+            android:id="@+id/card_image2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/SignActivity_card2_world_img_description"
+            android:src="@drawable/world"
+            tools:ignore="ImageContrastCheck" />
 
 
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
