@@ -41,23 +41,23 @@ public class SignActivity extends AppCompatActivity {
 
         SignOnBoardingItem onBoardingFirstItem = new SignOnBoardingItem();
         onBoardingFirstItem.setImg(R.drawable.accessibility_importance_img);
-        onBoardingFirstItem.setTitle(String.valueOf(R.string.SignActivity_ViewPager_item1_title));
-        onBoardingFirstItem.setDescription(String.valueOf(R.string.AccessibilityImportance_img_description));
+        onBoardingFirstItem.setTitle(getString(R.string.SignActivity_ViewPager_item1_title));
+        onBoardingFirstItem.setDescription(getString(R.string.AccessibilityImportance_img_description));
 
         SignOnBoardingItem onBoardingSecondItem = new SignOnBoardingItem();
         onBoardingSecondItem.setImg(R.drawable.temp1);
-        onBoardingSecondItem.setTitle(String.valueOf(R.string.SignActivity_ViewPager_item1_title));
-        onBoardingSecondItem.setDescription(String.valueOf(R.string.AccessibilityImportance_img_description));
+        onBoardingSecondItem.setTitle(getString(R.string.SignActivity_ViewPager_item2_title));
+        onBoardingSecondItem.setDescription(getString(R.string.AccessibilityImportance_img_description));
 
         SignOnBoardingItem onBoardingThirdItem = new SignOnBoardingItem();
         onBoardingThirdItem.setImg(R.drawable.temp2);
-        onBoardingThirdItem.setTitle(String.valueOf(R.string.SignActivity_ViewPager_item1_title));
-        onBoardingThirdItem.setDescription(String.valueOf(R.string.AccessibilityImportance_img_description));
+        onBoardingThirdItem.setTitle(getString(R.string.SignActivity_ViewPager_item2_title));
+        onBoardingThirdItem.setDescription(getString(R.string.AccessibilityImportance_img_description));
 
         SignOnBoardingItem onBoardingFourthItem = new SignOnBoardingItem();
         onBoardingFourthItem.setImg(R.drawable.images);
-        onBoardingFourthItem.setTitle(String.valueOf(R.string.SignActivity_ViewPager_item1_title));
-        onBoardingFourthItem.setDescription(String.valueOf(R.string.AccessibilityImportance_img_description));
+        onBoardingFourthItem.setTitle(getString(R.string.SignActivity_ViewPager_item2_title));
+        onBoardingFourthItem.setDescription(getString(R.string.AccessibilityImportance_img_description));
 
         onBoardingItems.add(onBoardingFirstItem);
         onBoardingItems.add(onBoardingSecondItem);
