@@ -3,25 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="?attr/materialCardViewElevatedStyle"
-    android:layout_width="400dp"
-    android:layout_height="400dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:clickable="true"
     android:focusable="true"
-    app:cardCornerRadius="30dp"
-    app:cardElevation="8dp">
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    android:layout_margin="16dp"
+    app:cardBackgroundColor="@color/light_gray">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
-
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/card_image_view"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:contentDescription="@string/app_name"
@@ -29,13 +25,13 @@
             android:src="@drawable/ic_launcher_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.55"
+            app:layout_constraintHeight_percent="0.50"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/textView39"
+            android:id="@+id/title_text_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -49,23 +45,23 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/card_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/card_image_view"
             app:layout_constraintVertical_bias="0.0"
             app:layout_constraintWidth_percent="0.75" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/duration_image_view"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:contentDescription="@string/app_name"
-            app:layout_constraintBottom_toBottomOf="@+id/textView40"
-            app:layout_constraintStart_toStartOf="@+id/textView39"
-            app:layout_constraintTop_toTopOf="@+id/textView40"
+            app:layout_constraintBottom_toBottomOf="@+id/duration_text_view"
+            app:layout_constraintStart_toStartOf="@+id/title_text_view"
+            app:layout_constraintTop_toTopOf="@+id/duration_text_view"
             app:srcCompat="@drawable/main_article_duration_icon" />
 
         <TextView
-            android:id="@+id/textView40"
+            android:id="@+id/duration_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -75,12 +71,12 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView39" />
+            app:layout_constraintStart_toEndOf="@+id/duration_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/title_text_view" />
 
 
         <ImageView
-            android:id="@+id/settings_toolbar_backImageView"
+            android:id="@+id/drop_down_image_view"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_marginEnd="8dp"
@@ -90,24 +86,24 @@
             android:focusable="true"
             android:padding="8dp"
             android:src="@drawable/main_article_card_drop_down_icon"
-            app:layout_constraintBottom_toBottomOf="@+id/textView39"
+            app:layout_constraintBottom_toBottomOf="@+id/title_text_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView39"
-            app:layout_constraintTop_toTopOf="@+id/textView39" />
+            app:layout_constraintStart_toEndOf="@+id/title_text_view"
+            app:layout_constraintTop_toTopOf="@+id/title_text_view" />
 
         <CheckBox
-            android:id="@+id/icon"
+            android:id="@+id/bookmarks_check_box"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:buttonTint="@color/cardview_light_background"
             app:buttonIcon="@drawable/main_add_to_bookmarks_selector"
             app:buttonIconTint="@color/main_add_to_bookmarks_icon_color_selector"
+            app:buttonTint="@color/light_gray"
             app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.975"
-            app:layout_constraintStart_toEndOf="@+id/textView40"
-            app:layout_constraintTop_toBottomOf="@+id/textView39"
+            app:layout_constraintStart_toEndOf="@+id/duration_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/title_text_view"
             app:layout_constraintVertical_bias="1.0" />
 
         <HorizontalScrollView
@@ -115,29 +111,23 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.15"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView40">
+            app:layout_constraintTop_toBottomOf="@+id/duration_text_view">
 
-            <com.google.android.material.chip.ChipGroup
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:chipSpacingVertical="0dp"
-                app:singleLine="true">
+                android:layout_height="match_parent">
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chip"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/app_name"
-                    app:chipBackgroundColor="@color/gray_blue"
-                    app:chipCornerRadius="30dp"
-                    app:chipIcon="@drawable/main_home_icon" />
-            </com.google.android.material.chip.ChipGroup>
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:singleLine="true"></com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
         </HorizontalScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
