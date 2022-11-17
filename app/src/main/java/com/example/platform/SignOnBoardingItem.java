@@ -6,10 +6,7 @@ public class SignOnBoardingItem {
     private String title;
     private String description;
 
-    public SignOnBoardingItem(int img, String title, String description) {
-        this.img = img;
-        this.title = title;
-        this.description = description;
+    public SignOnBoardingItem() {
     }
 
     public int getImg() {

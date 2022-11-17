@@ -5,6 +5,9 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SignActivity extends AppCompatActivity {
 
     @Override
@@ -19,9 +22,16 @@ public class SignActivity extends AppCompatActivity {
 
     //modified later to event listeners
     public void switchToSignUp(View view) {
-
     }
 
     public void forgotPasswordAction(View view) {
+    }
+
+    SignOnBoardingAdapter onBoardingAdapter;
+
+    private void setSignOnBoardingItems() {
+        List<SignOnBoardingItem> onBoardingItems = new ArrayList<>();
+        SignOnBoardingItem onBoardingItem = new SignOnBoardingItem();
+        
     }
 }
