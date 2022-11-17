@@ -4,16 +4,23 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SignActivity extends AppCompatActivity {
 
+    private SignOnBoardingAdapter onBoardingAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign);
+
+        setupSignOnBoardingItems();
+        ViewPager2 onBoardingViewPager = findViewById(R.id.SignActivity_viewPager);
+        onBoardingViewPager.setAdapter(onBoardingAdapter);
 
 //        to be implemented
 //        OrientationEventListener.onOrientationChanged()
@@ -27,11 +34,30 @@ public class SignActivity extends AppCompatActivity {
     public void forgotPasswordAction(View view) {
     }
 
-    SignOnBoardingAdapter onBoardingAdapter;
 
-    private void setSignOnBoardingItems() {
+    //TO DO: refactor this method into (1 list of 3 items) and fn to add
+    private void setupSignOnBoardingItems() {
         List<SignOnBoardingItem> onBoardingItems = new ArrayList<>();
-        SignOnBoardingItem onBoardingItem = new SignOnBoardingItem();
-        
+
+        SignOnBoardingItem onBoardingFirstItem = new SignOnBoardingItem();
+        onBoardingFirstItem.setImg(R.drawable.accessibility_importance_img);
+        onBoardingFirstItem.setTitle(String.valueOf(R.string.SignActivity_ViewPager_item1_title));
+        onBoardingFirstItem.setDescription(String.valueOf(R.string.AccessibilityImportance_img_description));
+
+        SignOnBoardingItem onBoardingSecondItem = new SignOnBoardingItem();
+        onBoardingSecondItem.setImg(R.drawable.accessibility_importance_img);
+        onBoardingSecondItem.setTitle(String.valueOf(R.string.SignActivity_ViewPager_item1_title));
+        onBoardingSecondItem.setDescription(String.valueOf(R.string.AccessibilityImportance_img_description));
+
+        SignOnBoardingItem onBoardingThirdItem = new SignOnBoardingItem();
+        onBoardingThirdItem.setImg(R.drawable.accessibility_importance_img);
+        onBoardingThirdItem.setTitle(String.valueOf(R.string.SignActivity_ViewPager_item1_title));
+        onBoardingThirdItem.setDescription(String.valueOf(R.string.AccessibilityImportance_img_description));
+
+        onBoardingItems.add(onBoardingFirstItem);
+        onBoardingItems.add(onBoardingSecondItem);
+        onBoardingItems.add(onBoardingThirdItem);
+
+        onBoardingAdapter = new SignOnBoardingAdapter(onBoardingItems);
     }
 }

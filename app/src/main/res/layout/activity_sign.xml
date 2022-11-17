@@ -15,6 +15,7 @@
         tools:layout="@layout/fragment_login" />
 
     <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/SignActivity_viewPager"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
