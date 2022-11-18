@@ -52,6 +52,7 @@ dependencies {
 
     //CardView Dependency
     implementation "androidx.cardview:cardview:1.0.0"
+    
 }
 
 if (hasProperty('buildScan')) {

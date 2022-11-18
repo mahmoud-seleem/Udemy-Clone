@@ -28,4 +28,14 @@
     <string name="second_name">Second Name</string>
     <string name="type_your_second_name">Type your second name</string>
     <string name="username">Username</string>
+    <string name="platform">Platform</string>
+    <string name="home">home</string>
+    <string name="edit">edit</string>
+    <string name="search_articles_using_this_item">search articles using this item</string>
+    <string name="your_notifications_are_here">your notifications are here!</string>
+    <string name="notifications">Notifications</string>
+    <string name="search_icon">search_icon</string>
+    <string name="settings">settings</string>
+    <string name="go_to_settings_from_here">go to settings from here</string>
+    <string name="search">Search</string>
 </resources>
