@@ -22,16 +22,17 @@ import java.util.ArrayList;
 public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.CardViewHolder> {
     ArrayList<ArticleCard> cards;
     Context context;
-
-    public ArticleCardAdapter(Context context, ArrayList<ArticleCard> cards) {
+    int cardLayoutResourceID;
+    public ArticleCardAdapter(Context context, ArrayList<ArticleCard> cards,int cardLayoutResourceID) {
         this.cards = cards;
         this.context = context;
+        this.cardLayoutResourceID = cardLayoutResourceID;
     }
 
     @NonNull
     @Override
     public CardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_article_card_layout, null, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(cardLayoutResourceID, null, false);
         CardViewHolder cardViewHolder = new CardViewHolder(view);
         return cardViewHolder;
     }
@@ -61,6 +62,11 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
         chip.setChipBackgroundColor(ColorStateList.
                 valueOf(Color.parseColor("#FFE0E0E0")));
         chip.setChipIcon(ContextCompat.getDrawable(context, iconId));
+        chip.setScaleY(0.7f);
+        chip.setScaleX(0.7f);
+        chip.ensureAccessibleTouchTarget(0);
+//        chip.setScaleX(0.7f);
+//        chip.setScaleY(0.7f);
         return chip;
     }
 

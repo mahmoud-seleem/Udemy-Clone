@@ -16,9 +16,9 @@ public class ArticleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article);
-        ChipGroup group = findViewById(R.id.chips);
-        Chip chip = makeChip("Platform",R.drawable.main_authors_icon);
-        group.addView(chip);
+//        ChipGroup group = findViewById(R.id.chips);
+//        Chip chip = makeChip("Platform",R.drawable.main_authors_icon);
+//        group.addView(chip);
     }
     private Chip makeChip(String name, int iconId) {
         Chip chip = new Chip(this);
