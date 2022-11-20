@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#4E60FE</color>
+    <color name="Chip_color">#FFE0E0E0</color>
     <color name="dark_gray">#83859C</color>
     <color name="light_gray">#F4F4F4</color>
     <color name="darker_gray">#545563</color>
