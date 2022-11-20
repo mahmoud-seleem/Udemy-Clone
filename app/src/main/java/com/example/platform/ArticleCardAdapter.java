@@ -1,17 +1,22 @@
 package com.example.platform;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
+import androidx.core.widget.NestedScrollView;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.chip.Chip;
@@ -23,12 +28,16 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
     ArrayList<ArticleCard> cards;
     Context context;
     int cardLayoutResourceID;
-    public ArticleCardAdapter(Context context, ArrayList<ArticleCard> cards,int cardLayoutResourceID) {
+    Fragment fragment;
+
+    public ArticleCardAdapter(Context context, Fragment fragment, ArrayList<ArticleCard> cards, int cardLayoutResourceID) {
         this.cards = cards;
         this.context = context;
         this.cardLayoutResourceID = cardLayoutResourceID;
+        this.fragment = fragment;
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @NonNull
     @Override
     public CardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -37,6 +46,7 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
         return cardViewHolder;
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public void onBindViewHolder(@NonNull CardViewHolder holder, int position) {
         ArticleCard card = cards.get(position);
@@ -48,8 +58,25 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
             Chip chip = makeChip(tag.getTagName(), tag.getTagIconResourceId());
             holder.cardChipGroup.addView(chip);
         }
-    }
-
+//        if (fragment instanceof Author_profile_Fragment) {
+//            holder.scrollView.setOnTouchListener(new View.OnTouchListener() {
+//                @Override
+//                public boolean onTouch(View view, MotionEvent motionEvent) {
+//                    if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+//                        ((Author_profile_Fragment) fragment).
+//                                stopRecyclerHorizontalScrolling(true);
+//                        return true;
+//                    } else if (motionEvent.getAction() == MotionEvent.ACTION_CANCEL
+//                            || motionEvent.getAction() == MotionEvent.ACTION_UP) {
+//                        ((Author_profile_Fragment) fragment).
+//                                stopRecyclerHorizontalScrolling(false);
+//                        return true;
+//                    }
+//                    return false;
+//
+//                }
+//            });
+        }
     @Override
     public int getItemCount() {
         return cards.size();
@@ -75,9 +102,18 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
         TextView cardTitle;
         TextView cardDuration;
         ChipGroup cardChipGroup;
-        HorizontalScrollView scrollView;
+        NestedScrollView scrollView;
+
+        @SuppressLint("ClickableViewAccessibility")
         public CardViewHolder(@NonNull View itemView) {
             super(itemView);
+            if (cardLayoutResourceID == R.layout.main_article_card_layout_with_fixed_size) {
+                DisplayMetrics displayMetrics = new DisplayMetrics();
+                ((MainActivity) context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+                int width = displayMetrics.widthPixels;
+                itemView.setLayoutParams(new RecyclerView.LayoutParams(width / 3, RecyclerView.LayoutParams.MATCH_PARENT));
+            }
+            scrollView = itemView.findViewById(R.id.horizontalScrollView);
             cardImageView = itemView.findViewById(R.id.card_image_view);
             cardTitle = itemView.findViewById(R.id.title_text_view);
             cardDuration = itemView.findViewById(R.id.duration_text_view);

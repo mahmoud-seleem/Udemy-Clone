@@ -78,7 +78,7 @@ public class HomeFragment extends Fragment {
         cards.add(new ArticleCard());
         cards.add(new ArticleCard());
         cards.add(new ArticleCard());
-        ArticleCardAdapter adapter = new ArticleCardAdapter(getContext(), cards,R.layout.main_article_card_layout);
+        ArticleCardAdapter adapter = new ArticleCardAdapter(getContext(),this, cards,R.layout.main_article_card_layout);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 3);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);

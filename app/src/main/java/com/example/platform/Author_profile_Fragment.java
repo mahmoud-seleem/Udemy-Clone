@@ -1,16 +1,14 @@
 package com.example.platform;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
@@ -29,6 +27,7 @@ public class Author_profile_Fragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private boolean isstop;
 
     public Author_profile_Fragment() {
         // Required empty public constructor
@@ -79,19 +78,23 @@ public class Author_profile_Fragment extends Fragment {
         cards.add(new ArticleCard());
         cards.add(new ArticleCard());
         cards.add(new ArticleCard());
-        ArticleCardAdapter adapter = new ArticleCardAdapter(getContext(), cards,R.layout.main_article_card_layout_with_fixed_size);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
+        ArticleCardAdapter adapter = new ArticleCardAdapter(getContext(),this, cards, R.layout.main_article_card_layout_with_fixed_size);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-        recyclerView.addItemDecoration(new SpaceItemDecoration(0,30));
+        recyclerView.addItemDecoration(new SpaceItemDecoration(0, 30));
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int height = displayMetrics.heightPixels;
         int width = displayMetrics.widthPixels;
         float density = displayMetrics.density;
         System.out.println("____________________________");
-        System.out.println((float)width/density);
+        System.out.println((float) width / density);
         System.out.println("____________________________");
         return view;
     }
+//
+//    public void stopRecyclerHorizontalScrolling(boolean stop) {
+//        isstop = !stop;
+//    }
 }
