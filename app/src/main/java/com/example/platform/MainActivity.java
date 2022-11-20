@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 //            finish(); //finish first main activity //main -> sign -> main =>>> main(finish) -> sign -> main
 //        }
 
-        EditText search = (EditText) findViewById(R.id.search_box);
+        EditText search = findViewById(R.id.search_box);
         search.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_search, 0, 0, 0);
 
         final MaterialToolbar topAppBar = findViewById(R.id.topAppBar);
@@ -37,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        TextView authorItem = findViewById(R.id.author_item);
+//        Drawable authorImage = get
+//        authorItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_search, 0, 0, 0);
+//        authorItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_search, 0, 0, 0);
 
     }
 

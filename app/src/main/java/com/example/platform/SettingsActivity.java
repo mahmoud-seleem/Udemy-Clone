@@ -12,9 +12,6 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-//        if (savedInstanceState == null) {
-//            getSupportFragmentManager().
-//                    beginTransaction().replace(R.id.loginFragmentContainerView, new LoginFragment()).commit();
-//        }
+
     }
 }

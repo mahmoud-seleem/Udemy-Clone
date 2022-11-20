@@ -38,4 +38,6 @@
     <string name="settings">settings</string>
     <string name="go_to_settings_from_here">go to settings from here</string>
     <string name="search">Search</string>
+    <string name="favourite_authors">Favourite Authors</string>
+    <string name="author">author</string>
 </resources>
