@@ -12,6 +12,7 @@ import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
@@ -87,7 +88,7 @@ public class MyConstraintLayout extends ConstraintLayout {
                     && y > child.getTop() && y < child.getBottom()) {
                 for (EditText editText : editTexts) {
                     InputMethodManager inputMethodManager = (InputMethodManager) (context).getSystemService(INPUT_METHOD_SERVICE);
-                    View view = ((SettingsActivity) context).getCurrentFocus();
+                    View view = ((AppCompatActivity)context).getCurrentFocus();
                     if (view != null){
                         inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
                     }

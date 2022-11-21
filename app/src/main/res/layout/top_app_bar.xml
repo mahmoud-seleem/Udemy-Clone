@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:fitsSystemWindows="true"
+            app:title="@string/platform"
+            app:menu="@menu/top_app_bar"
+            app:navigationIcon="@drawable/ic_menu">
+
+            <EditText
+                android:id="@+id/search_box"
+                android:layout_marginStart="25dp"
+                android:layout_width="224dp"
+                android:layout_height="48dp"
+                android:hint="@string/search"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:background="@drawable/search_box"
+                android:importantForAutofill="no"
+                android:inputType="textAutoComplete|textAutoCorrect|textMultiLine"
+                android:imeOptions="actionSearch" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

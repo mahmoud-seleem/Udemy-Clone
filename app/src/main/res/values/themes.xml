@@ -29,5 +29,169 @@
     <style name="drawer_corners_shape" parent="">
         <item name="cornerSize">15%</item>
     </style>
+    <!--        login text-->
+
+    <style name="SignActivity_login_text">
+        <item name="fontFamily">Nunito</item>
+        <item name="lineHeight">82sp</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#2B2B43</item>
+    </style>
+
+    <style name="SignActivity_sign_in_wit">
+        <item name="android:textSize">
+            14sp
+        </item>
+        <item name="fontFamily">Nunito</item>
+        <item name="lineHeight">20sp</item>
+        <item name="android:letterSpacing">
+            0.01
+        </item>
+
+        <item name="android:textColor">
+            #545563
+        </item>
+    </style>
+
+    <style name="SignActivity_email_text">
+        <item name="fontFamily">Nunito</item>
+        <item name="lineHeight">16sp</item>
+        <item name="android:textSize">
+            12sp
+        </item>
+
+        <item name="android:textColor">
+            #545563
+        </item>
+
+    </style>
+
+    <style name="SignActivity_email_hint">
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.01
+        </item>
+
+        <item name="android:textColor">
+            #83859C
+        </item>
+    </style>
+
+    <style name="SignActivity_dont_have_account">
+
+        <item name="android:textSize">
+            16sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.01
+        </item>
+
+        <item name="android:textColor">
+            #545563
+        </item>
+
+    </style>
+
+    <style name="checkbox">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.01
+        </item>
+
+        <item name="android:textColor">
+            #2B2B43
+        </item>
+
+    </style>
+
+    <style name="borderless_button">
+
+        <item name="android:textSize">
+            16sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.01
+        </item>
+
+        <item name="android:textColor">
+            #4E60FF
+        </item>
+
+    </style>
+
+    <style name="onBoarding_title">
+
+        <item name="android:textSize">
+            32sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <style name="onBoarding_description">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.01
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <style name="sign_up_headings">
+
+        <item name="android:textSize">
+            35sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0
+        </item>
+
+        <item name="android:textColor">
+            #4E60FF
+        </item>
+
+    </style>
+
+    <style name="sign_up_sub_title_description">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.01
+        </item>
+
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+
 
 </resources>

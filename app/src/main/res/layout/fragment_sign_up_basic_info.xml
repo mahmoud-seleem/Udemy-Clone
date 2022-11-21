@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpBasicInfoFragment"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        style="@style/sign_up_headings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="77dp"
+        android:gravity="center_horizontal"
+        android:text="@string/create_your_account" />
+
+    <TextView
+        android:id="@+id/sub_title_basic_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="129dp"
+        android:lineSpacingExtra="23sp"
+        android:text="@string/let_s_fill_up_the_basic_info_about_you"
+        android:textAppearance="@style/sign_up_sub_title_description" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="250dp">
+
+        <TextView
+            android:id="@+id/sign_up_first_name_label"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:gravity="start"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/first_name"
+            android:textAppearance="@style/SignActivity_email_text" />
+
+        <TextView
+            android:id="@+id/sign_up_second_name_label"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/second_name"
+            android:textAppearance="@style/SignActivity_email_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="266dp">
+
+        <EditText
+            android:id="@+id/sign_up_first_name"
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@drawable/box"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:labelFor="@+id/sign_up_first_name"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textColorHint="#757575"
+            android:hint="@string/type_your_first_name"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/sign_up_second_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="18dp"
+            android:background="@drawable/box"
+            android:hint="@string/type_your_second_name"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:labelFor="@+id/sign_up_first_name"
+            android:textColorHint="#757575"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="330dp">
+
+        <TextView
+            android:id="@+id/sign_up_email_label"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:gravity="start"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/SignActivity_email"
+            android:textAppearance="@style/SignActivity_email_text" />
+
+        <TextView
+            android:id="@+id/sign_up_username_label"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/username"
+            android:textAppearance="@style/SignActivity_email_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="346dp">
+
+        <EditText
+            android:id="@+id/sign_up_email_editText"
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="48dp"
+            android:background="@drawable/box"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:labelFor="@+id/sign_up_email_label"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/sign_up_username_editText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="18dp"
+            android:background="@drawable/box"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:labelFor="@+id/sign_up_username_label"
+            android:textColorHint="#757575"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -73,5 +75,10 @@ public class SettingsActivity extends AppCompatActivity {
 
             }
         });
+
+//        if (savedInstanceState == null) {
+//            getSupportFragmentManager().
+//                    beginTransaction().replace(R.id.loginFragmentContainerView, new LoginFragment()).commit();
+//        }
     }
 }

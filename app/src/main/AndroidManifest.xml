@@ -23,22 +23,22 @@
         </activity>
         <activity
             android:name=".SignActivity"
-            android:exported="true">
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:exported="true">
-
+            android:exported="false">
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name="com.example.platform.MainActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data
