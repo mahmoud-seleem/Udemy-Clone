@@ -4,9 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
@@ -27,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
 //            finish(); //finish first main activity //main -> sign -> main =>>> main(finish) -> sign -> main
 //        }
 
+        FavouriteAuthorsFragment favourite_authors_fragment = new FavouriteAuthorsFragment();
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.add(R.id.fragment_container_favourite_authors, favourite_authors_fragment, "HELLO");
+        fragmentTransaction.commit();
+
+
         EditText search = findViewById(R.id.search_box);
         search.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_search, 0, 0, 0);
 
@@ -38,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        TextView authorItem = findViewById(R.id.author_item);
+
+//        TextView authorItem = findViewById(R.id.author_item);
 //        Drawable authorImage = get
 //        authorItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_search, 0, 0, 0);
 //        authorItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_search, 0, 0, 0);
