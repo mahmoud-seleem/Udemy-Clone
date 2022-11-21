@@ -1,36 +1,28 @@
 package com.example.platform;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import android.content.res.ColorStateList;
-import android.graphics.BlendMode;
-import android.graphics.Color;
-import android.graphics.ColorFilter;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffColorFilter;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
-import com.google.android.material.appbar.MaterialToolbar;
-import android.view.MenuItem;
-import android.widget.FrameLayout;
 
-import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.navigation.NavigationView;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MyConstraintLayout constraintLayout  = findViewById(R.id.parent_constraint);
+        MyConstraintLayout constraintLayout = findViewById(R.id.parent_constraint);
         constraintLayout.getaAllEditTexts(constraintLayout);
 //        SharedPreferences preferences = getSharedPreferences("sharedPreferencesFile", MODE_PRIVATE);
 //        boolean isTheFirstAppRun = preferences.getBoolean("FirstAppRun", true);
@@ -49,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         topAppBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                drawerLayout.openDrawer(GravityCompat.START,true);
+                drawerLayout.openDrawer(GravityCompat.START, true);
             }
         });
         drawer.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -60,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 //        HomeFragment homeFragment = new HomeFragment();
-        Author_profile_Fragment author_profile_fragment = new Author_profile_Fragment();
+        Author_profile_Fragment author_profile_fragment = new Author_profile_Fragment(constraintLayout);
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.add(R.id.frame, author_profile_fragment, "HELLO");

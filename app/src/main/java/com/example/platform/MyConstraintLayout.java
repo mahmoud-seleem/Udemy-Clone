@@ -22,6 +22,7 @@ import java.util.ArrayList;
 public class MyConstraintLayout extends ConstraintLayout {
     ArrayList<EditText> editTexts = new ArrayList<>();
     Context context;
+    ViewGroup parent;
 
     public MyConstraintLayout(@NonNull Context context) {
         super(context);
@@ -45,6 +46,7 @@ public class MyConstraintLayout extends ConstraintLayout {
     }
 
     public void getaAllEditTexts(ViewGroup parent) {
+        this.parent = parent;
         for (int i = 0; i < parent.getChildCount(); i++) {
             View child = parent.getChildAt(i);
             if (child instanceof ViewGroup) {
@@ -67,7 +69,7 @@ public class MyConstraintLayout extends ConstraintLayout {
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         int x = Math.round(ev.getX());
         int y = Math.round(ev.getY());
-        clearEditTextFocus(this, x, y);
+        clearEditTextFocus(this.parent, x, y);
         return false;
     }
 
@@ -75,18 +77,12 @@ public class MyConstraintLayout extends ConstraintLayout {
         for (int i = 0; i < parent.getChildCount(); i++) {
             View child = parent.getChildAt(i);
             if (child instanceof ViewGroup) {
-                if (child instanceof ViewPager2) {
-                    Fragment fragment = ((SettingsActivity) context).getSupportFragmentManager().findFragmentByTag("f" + ((ViewPager2) child).getCurrentItem());
-                    if (fragment != null) {
-                        clearEditTextFocus((ViewGroup) fragment.getView(), x, y);
-                    }
-                } else {
                     clearEditTextFocus((ViewGroup) child, x, y);
-                }
             } else if ((!(child instanceof EditText))
                     && x > child.getLeft() && x < child.getRight()
                     && y > child.getTop() && y < child.getBottom()) {
                 for (EditText editText : editTexts) {
+                    System.out.println("_____________________mahmoud_______________________");
                     InputMethodManager inputMethodManager = (InputMethodManager) (context).getSystemService(INPUT_METHOD_SERVICE);
                     View view = ((AppCompatActivity)context).getCurrentFocus();
                     if (view != null){

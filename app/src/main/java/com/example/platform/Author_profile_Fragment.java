@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
  */
 public class Author_profile_Fragment extends Fragment {
 
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -28,11 +30,14 @@ public class Author_profile_Fragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private boolean isstop;
-
+    private MyConstraintLayout constraintLayout;
     public Author_profile_Fragment() {
         // Required empty public constructor
     }
 
+    public Author_profile_Fragment(ConstraintLayout constraintLayout){
+    this.constraintLayout = (MyConstraintLayout) constraintLayout;
+    }
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -65,6 +70,8 @@ public class Author_profile_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_author_profile_, container, false);
+        MyConstraintLayout constraintLayout = view.findViewById(R.id.parent_constraint1);
+        constraintLayout.getaAllEditTexts(this.constraintLayout);
         RecyclerView recyclerView = view.findViewById(R.id.articles_recycler_view);
         ArrayList<ArticleCard> cards = new ArrayList<ArticleCard>();
         cards.add(new ArticleCard());
