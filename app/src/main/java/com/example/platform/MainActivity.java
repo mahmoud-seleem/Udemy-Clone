@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
@@ -26,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
 //            finish(); //finish first main activity //main -> sign -> main =>>> main(finish) -> sign -> main
 //        }
 
-//        FavouriteAuthorsFragment favourite_authors_fragment = new FavouriteAuthorsFragment();
-//        FragmentManager fm = getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction = fm.beginTransaction();
-//        fragmentTransaction.add(R.id.fragment_container_favourite_authors, favourite_authors_fragment, "HELLO");
-//        fragmentTransaction.commit();
+        AuthorsCollectionFragment authors_collection_fragment = new AuthorsCollectionFragment();
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.add(R.id.authors_collections_frame, authors_collection_fragment, "HELLO");
+        fragmentTransaction.commit();
 
 
         EditText search = findViewById(R.id.search_box);

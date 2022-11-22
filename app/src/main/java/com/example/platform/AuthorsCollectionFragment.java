@@ -6,6 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,6 +62,17 @@ public class AuthorsCollectionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_authors_collection, container, false);
+        View view = inflater.inflate(R.layout.fragment_authors_collection, container, false);
+
+        RecyclerView recyclerView = view.findViewById(R.id.authors_collection_recyclerView);
+        ArrayList<AuthorCollection> collections = new ArrayList<AuthorCollection>();
+        for (int i = 0; i < 20; i++) {
+            collections.add(new AuthorCollection(R.drawable.ic_launcher_background, "platform", "6"));
+        }
+        AuthorCollectionAdapter adapter = new AuthorCollectionAdapter(collections, getContext(), R.id.authors_collection_recyclerView, this);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 3);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+        return view;
     }
 }
