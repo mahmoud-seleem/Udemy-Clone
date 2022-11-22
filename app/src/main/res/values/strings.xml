@@ -41,4 +41,5 @@
     <string name="favourite_authors">Favourite Authors</string>
     <string name="author">author</string>
     <string name="following">Following</string>
+    <string name="collections">Collections</string>
 </resources>
