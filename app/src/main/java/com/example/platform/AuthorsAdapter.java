@@ -27,12 +27,9 @@ public class AuthorsAdapter extends RecyclerView.Adapter<AuthorsAdapter.AuthorVi
     @NonNull
     @Override
     public AuthorViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new AuthorViewHolder(
-                LayoutInflater.from(parent.getContext()).inflate(
-                        R.layout.favourite_author_card, null, false
-                )
-
-        );
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.favourite_author_card,null,false);
+        AuthorViewHolder authorViewHolder = new AuthorViewHolder(view);
+        return authorViewHolder;
     }
 
     @Override

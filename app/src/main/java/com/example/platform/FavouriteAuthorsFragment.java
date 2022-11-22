@@ -14,7 +14,12 @@ import java.util.ArrayList;
 
 public class FavouriteAuthorsFragment extends Fragment {
 
+    public FavouriteAuthorsFragment(){
 
+    }
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -28,9 +33,9 @@ public class FavouriteAuthorsFragment extends Fragment {
 
         AuthorsAdapter authorsListAdapter = new AuthorsAdapter(getContext(), favouriteAuthors, this);
         RecyclerView recyclerView = view.findViewById(R.id.favourite_authors_recycler_view);
+        recyclerView.setAdapter(authorsListAdapter);
         LinearLayoutManager manager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(manager);
-        recyclerView.setAdapter(authorsListAdapter);
 
         // Inflate the layout for this fragment
         return view;

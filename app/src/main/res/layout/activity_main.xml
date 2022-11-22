@@ -35,11 +35,11 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.fragment.app.FragmentContainerView
+    <FrameLayout
         android:id="@+id/fragment_container_favourite_authors"
         android:name="com.example.platform.FavouriteAuthorsFragment"
         android:layout_marginTop="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout="@layout/fragment_favourite_authors" />
+        tools:layout="@layout/fragment_favourite_authors"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
