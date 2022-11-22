@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -16,12 +15,10 @@ import java.util.ArrayList;
 public class AuthorsAdapter extends RecyclerView.Adapter<AuthorsAdapter.AuthorViewHolder> {
     private Context context;
     private ArrayList<Author> authorsList;
-    private Fragment fragment;
 
-    public AuthorsAdapter(Context context, ArrayList<Author> authorsList, Fragment fragment) {
+    public AuthorsAdapter(Context context, ArrayList<Author> authorsList) {
         this.context = context;
         this.authorsList = authorsList;
-        this.fragment = fragment;
     }
 
     @NonNull
