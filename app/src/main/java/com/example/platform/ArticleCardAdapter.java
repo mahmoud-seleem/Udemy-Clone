@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -29,12 +30,13 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
     Context context;
     int cardLayoutResourceID;
     Fragment fragment;
-
-    public ArticleCardAdapter(Context context, Fragment fragment, ArrayList<ArticleCard> cards, int cardLayoutResourceID) {
+    RecyclerView parent;
+    public ArticleCardAdapter(Context context, Fragment fragment, ArrayList<ArticleCard> cards, int cardLayoutResourceID,RecyclerView parent) {
         this.cards = cards;
         this.context = context;
         this.cardLayoutResourceID = cardLayoutResourceID;
         this.fragment = fragment;
+        this.parent = parent;
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -102,7 +104,7 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
         TextView cardTitle;
         TextView cardDuration;
         ChipGroup cardChipGroup;
-        NestedScrollView scrollView;
+        HorizontalScrollView scrollView;
 
         @SuppressLint("ClickableViewAccessibility")
         public CardViewHolder(@NonNull View itemView) {
@@ -113,6 +115,7 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
                 int width = displayMetrics.widthPixels;
                 itemView.setLayoutParams(new RecyclerView.LayoutParams(width / 3, RecyclerView.LayoutParams.MATCH_PARENT));
             }
+
             scrollView = itemView.findViewById(R.id.horizontalScrollView);
             cardImageView = itemView.findViewById(R.id.card_image_view);
             cardTitle = itemView.findViewById(R.id.title_text_view);

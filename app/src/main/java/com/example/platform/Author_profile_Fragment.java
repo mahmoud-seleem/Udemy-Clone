@@ -85,7 +85,7 @@ public class Author_profile_Fragment extends Fragment {
         cards.add(new ArticleCard());
         cards.add(new ArticleCard());
         cards.add(new ArticleCard());
-        ArticleCardAdapter adapter = new ArticleCardAdapter(getContext(),this, cards, R.layout.main_article_card_layout_with_fixed_size);
+        ArticleCardAdapter adapter = new ArticleCardAdapter(getContext(),this, cards, R.layout.main_article_card_layout_with_fixed_size,recyclerView);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);

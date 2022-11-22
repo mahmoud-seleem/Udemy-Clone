@@ -23,6 +23,9 @@
     <style name="ShapeAppearanceOverlay" parent="">
         <item name="cornerSize">50%</item>
     </style>
+    <style name="library_collections_image_style" parent="">
+        <item name="cornerSize">20%</item>
+    </style>
 <style name="drawer_style" parent="@style/Widget.Material3.NavigationView">
     <item name="android:windowTranslucentStatus">true</item>
 </style>

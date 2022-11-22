@@ -52,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 //        HomeFragment homeFragment = new HomeFragment();
-        Author_profile_Fragment author_profile_fragment = new Author_profile_Fragment(constraintLayout);
+        LibraryCollectionsFragment libraryCollectionsFragment = new LibraryCollectionsFragment();
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.add(R.id.frame, author_profile_fragment, "HELLO");
+        fragmentTransaction.add(R.id.frame, libraryCollectionsFragment, "HELLO");
         fragmentTransaction.commit();
     }
 
