@@ -73,6 +73,8 @@ public class AuthorsCollectionFragment extends Fragment {
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 3);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
+        recyclerView.addItemDecoration(new SpaceItemDecoration(30,30));
+        recyclerView.setHasFixedSize(true);
         return view;
     }
 }

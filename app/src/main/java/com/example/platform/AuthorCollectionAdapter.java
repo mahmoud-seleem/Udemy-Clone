@@ -4,6 +4,7 @@ package com.example.platform;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -85,6 +86,16 @@ public class AuthorCollectionAdapter extends RecyclerView.Adapter<AuthorCollecti
 
         public CardViewHolder(@NonNull View itemView) {
             super(itemView);
+            if (fragment instanceof Author_profile_Fragment){
+                DisplayMetrics displayMetrics = new DisplayMetrics();
+                ((MainActivity) context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+                int width = displayMetrics.widthPixels;
+                itemView.setLayoutParams(new RecyclerView.LayoutParams(width / 3, RecyclerView.LayoutParams.MATCH_PARENT));
+            }
+            DisplayMetrics displayMetrics = new DisplayMetrics();
+            ((MainActivity) context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+            int width = displayMetrics.widthPixels;
+            itemView.setLayoutParams(new RecyclerView.LayoutParams(width / 3, RecyclerView.LayoutParams.MATCH_PARENT));
             this.collectionImg = itemView.findViewById(R.id.author_collection_imageView);
             this.collectionTitle = itemView.findViewById(R.id.title_text_view);
             this.articlesNumber = itemView.findViewById(R.id.articles_in_collection_number);

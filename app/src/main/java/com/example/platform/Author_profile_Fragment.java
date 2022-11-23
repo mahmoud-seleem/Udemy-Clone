@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -91,6 +92,18 @@ public class Author_profile_Fragment extends Fragment {
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(new SpaceItemDecoration(0, 30));
         recyclerView.setHasFixedSize(true);
+
+        RecyclerView recyclerView1 = view.findViewById(R.id.collections_recycler_view);
+        ArrayList<AuthorCollection> collections = new ArrayList<AuthorCollection>();
+        for (int i = 0; i < 20; i++) {
+            collections.add(new AuthorCollection(R.drawable.ic_launcher_background, "platform", "6"));
+        }
+        AuthorCollectionAdapter adapter2 = new AuthorCollectionAdapter(collections, getContext(), R.layout.authors_collection_card, this);
+        RecyclerView.LayoutManager layoutManager2 = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false) ;
+        recyclerView1.setLayoutManager(layoutManager2);
+        recyclerView1.setAdapter(adapter2);
+        recyclerView1.addItemDecoration(new SpaceItemDecoration(0,30));
+        recyclerView1.setHasFixedSize(true);
 //        DisplayMetrics displayMetrics = new DisplayMetrics();
 //        getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
 //        int height = displayMetrics.heightPixels;
