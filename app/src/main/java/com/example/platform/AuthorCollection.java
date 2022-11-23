@@ -7,7 +7,7 @@ public class AuthorCollection {
     private int img;
     private String title;
     private String articlesNumber;
-    private ArrayList<Tag> tags;
+    private ArrayList<Tag> tags = new ArrayList<>();
 
 
     public AuthorCollection(int img, String title, String articlesNumber) {

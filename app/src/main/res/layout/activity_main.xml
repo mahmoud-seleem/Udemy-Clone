@@ -42,9 +42,9 @@
     <!--        android:layout_height="wrap_content"-->
     <!--        tools:layout="@layout/fragment_authors_collection" />-->
 
-    <androidx.fragment.app.FragmentContainerView
+    <FrameLayout
         android:id="@+id/authors_collections_frame"
-        android:layout_marginTop="?attr/actionBarSize"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

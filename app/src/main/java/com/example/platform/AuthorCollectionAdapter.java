@@ -48,7 +48,7 @@ public class AuthorCollectionAdapter extends RecyclerView.Adapter<AuthorCollecti
         holder.collectionImg.setImageResource(collection.getImg());
         holder.collectionTitle.setText(collection.getTitle());
         holder.articlesNumber.setText(collection.getArticlesNumber());
-
+        holder.cardChipGroup.removeAllViews();
         for (Tag tag : collection.getTags()) {
             Chip chip = makeChip(tag.getTagName(), tag.getTagIconResourceId());
             holder.cardChipGroup.addView(chip);
@@ -65,7 +65,7 @@ public class AuthorCollectionAdapter extends RecyclerView.Adapter<AuthorCollecti
     private Chip makeChip(String name, int iconId) {
         Chip chip = new Chip(context);
         chip.setText(name);
-//        chip.setChipCornerRadius(30);
+        chip.setChipCornerRadius(30);
         chip.setChipBackgroundColor(ColorStateList.
                 valueOf(Color.parseColor("#FFE0E0E0")));
         chip.setChipIcon(ContextCompat.getDrawable(context, iconId));

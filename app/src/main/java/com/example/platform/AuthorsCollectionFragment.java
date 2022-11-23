@@ -69,7 +69,7 @@ public class AuthorsCollectionFragment extends Fragment {
         for (int i = 0; i < 20; i++) {
             collections.add(new AuthorCollection(R.drawable.ic_launcher_background, "platform", "6"));
         }
-        AuthorCollectionAdapter adapter = new AuthorCollectionAdapter(collections, getContext(), R.id.authors_collection_recyclerView, this);
+        AuthorCollectionAdapter adapter = new AuthorCollectionAdapter(collections, getContext(), R.layout.authors_collection_card, this);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 3);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
