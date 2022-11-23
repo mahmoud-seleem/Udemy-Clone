@@ -90,14 +90,15 @@ public class Author_profile_Fragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(new SpaceItemDecoration(0, 30));
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        int height = displayMetrics.heightPixels;
-        int width = displayMetrics.widthPixels;
-        float density = displayMetrics.density;
-        System.out.println("____________________________");
-        System.out.println((float) width / density);
-        System.out.println("____________________________");
+        recyclerView.setHasFixedSize(true);
+//        DisplayMetrics displayMetrics = new DisplayMetrics();
+//        getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+//        int height = displayMetrics.heightPixels;
+//        int width = displayMetrics.widthPixels;
+//        float density = displayMetrics.density;
+//        System.out.println("____________________________");
+//        System.out.println((float) width / density);
+//        System.out.println("____________________________");
         return view;
     }
 //

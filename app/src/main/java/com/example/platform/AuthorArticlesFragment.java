@@ -81,6 +81,7 @@ public class AuthorArticlesFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(new SpaceItemDecoration(30,30));
+        recyclerView.setHasFixedSize(true);
         return view;
     }
 }

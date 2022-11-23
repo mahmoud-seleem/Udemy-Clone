@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
+import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -116,7 +117,6 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
                 ((MainActivity) context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
                 int width = displayMetrics.widthPixels;
                 itemView.setLayoutParams(new RecyclerView.LayoutParams(width / 3, RecyclerView.LayoutParams.MATCH_PARENT));
-
             }
             if (cardLayoutResourceID == R.layout.history_and_bookmaks_card_layout) {
                 itemView.setLayoutParams(new RecyclerView.LayoutParams(parent.getWidth(), RecyclerView.LayoutParams.WRAP_CONTENT));

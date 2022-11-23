@@ -74,6 +74,7 @@ public class HistoryFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(new SpaceItemDecoration(5, 0));
+        recyclerView.setHasFixedSize(true);
         return view;
     }
 }
