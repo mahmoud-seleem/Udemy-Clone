@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
 //            finish(); //finish first main activity //main -> sign -> main =>>> main(finish) -> sign -> main
 //        }
 
-        FavouriteAuthorsFragment favourite_authors_fragment = new FavouriteAuthorsFragment();
+        AuthorsCollectionFragment authors_collection_fragment = new AuthorsCollectionFragment();
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.add(R.id.fragment_container_favourite_authors, favourite_authors_fragment, "HELLO");
+        fragmentTransaction.add(R.id.authors_collections_frame, authors_collection_fragment, "HELLO");
         fragmentTransaction.commit();
 
 

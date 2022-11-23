@@ -183,5 +183,11 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="headings">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#2B2B43</item>
+    </style>
 
 </resources>
