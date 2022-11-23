@@ -56,4 +56,10 @@
     <string name="settings">settings</string>
     <string name="go_to_settings_from_here">go to settings from here</string>
     <string name="search">Search</string>
+    <string name="favourite_authors">Favourite Authors</string>
+    <string name="author">author</string>
+    <string name="following">Following</string>
+    <string name="collections">Collections</string>
+    <string name="_5">5</string>
+    <string name="add_this_author_s_collection_to_your_collections">add this author\'s collection to your collections</string>
 </resources>

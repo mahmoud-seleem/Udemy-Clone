@@ -34,7 +34,7 @@
             android:exported="false">
         </activity>
         <activity
-            android:name="com.example.platform.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="fullSensor">
             <intent-filter>
