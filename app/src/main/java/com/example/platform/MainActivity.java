@@ -60,9 +60,10 @@ public class MainActivity extends AppCompatActivity {
         HistoryFragment historyFragment = new HistoryFragment();
         FollowingAuthorsFragment followingAuthorsFragment = new FollowingAuthorsFragment();
         AuthorsCollectionFragment authorsCollectionFragment = new AuthorsCollectionFragment();
+        CollectionArticlesFragment collectionArticlesFragment = new CollectionArticlesFragment();
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.add(R.id.frame, author_profile_fragment, "HELLO");
+        fragmentTransaction.add(R.id.frame, homeFragment, "HELLO");
         fragmentTransaction.commit();
     }
 
