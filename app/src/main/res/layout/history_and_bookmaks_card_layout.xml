@@ -1,85 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     style="?attr/materialCardViewElevatedStyle"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
     android:clickable="true"
     android:focusable="true"
     app:cardBackgroundColor="@color/light_gray"
-    app:cardCornerRadius="20dp"
+    app:cardCornerRadius="0dp"
     app:cardElevation="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/card_image_view"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
             android:contentDescription="@string/app_name"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_background"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHeight_percent="0.60"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/title_text_view"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintWidth_percent="0.22"
+            app:shapeAppearance="@style/library_collections_image_style" />
 
         <TextView
             android:id="@+id/title_text_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
             android:ellipsize="end"
             android:maxLines="1"
             android:text="@string/app_name"
-            android:textSize="14sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/card_image_view"
-            app:layout_constraintTop_toBottomOf="@+id/card_image_view"
+            app:layout_constraintBottom_toTopOf="@id/duration_text_view"
+            app:layout_constraintEnd_toStartOf="@id/drop_down_image_view"
+            app:layout_constraintStart_toEndOf="@+id/card_image_view"
+            app:layout_constraintTop_toTopOf="@+id/card_image_view"
             app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintWidth_percent="0.75" />
-
-        <ImageView
-            android:id="@+id/duration_image_view"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:contentDescription="@string/app_name"
-            app:layout_constraintBottom_toBottomOf="@+id/duration_text_view"
-            app:layout_constraintStart_toStartOf="@+id/title_text_view"
-            app:layout_constraintTop_toTopOf="@+id/duration_text_view"
-            app:srcCompat="@drawable/main_article_duration_icon" />
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
             android:id="@+id/duration_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="471dp"
             android:text="@string/app_name"
             android:textColor="@color/darker_gray"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/card_image_view"
+            app:layout_constraintEnd_toEndOf="@+id/title_text_view"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/duration_image_view"
-            app:layout_constraintTop_toBottomOf="@+id/title_text_view" />
-
+            app:layout_constraintStart_toStartOf="@+id/title_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/drop_down_image_view"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:contentDescription="@string/app_name"
@@ -92,39 +87,18 @@
             app:layout_constraintStart_toEndOf="@+id/title_text_view"
             app:layout_constraintTop_toTopOf="@+id/title_text_view" />
 
-        <CheckBox
-            android:id="@+id/bookmarks_check_box"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:buttonIcon="@drawable/main_add_to_bookmarks_selector"
-            app:buttonIconTint="@color/main_add_to_bookmarks_icon_color_selector"
-            app:buttonTint="@color/light_gray"
-            app:layout_constraintBottom_toBottomOf="@+id/duration_text_view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.975"
-            app:layout_constraintStart_toEndOf="@+id/duration_text_view"
-            app:layout_constraintTop_toTopOf="@+id/duration_text_view" />
-
-        <HorizontalScrollView
+        <LinearLayout
             android:id="@+id/horizontalScrollView"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="50dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.15"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/card_image_view"
             app:layout_constraintTop_toBottomOf="@+id/duration_text_view">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
                 <com.google.android.material.chip.ChipGroup
                     android:id="@+id/chip_group"
                     android:layout_width="match_parent"
@@ -133,9 +107,9 @@
                     app:chipSpacingHorizontal="-28dp"
                     app:chipSpacingVertical="-16dp"
                     app:singleLine="true">
-
                 </com.google.android.material.chip.ChipGroup>
             </LinearLayout>
-        </HorizontalScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
+
+

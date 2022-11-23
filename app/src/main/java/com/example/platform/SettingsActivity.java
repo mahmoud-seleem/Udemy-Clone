@@ -76,9 +76,6 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-//        if (savedInstanceState == null) {
-//            getSupportFragmentManager().
-//                    beginTransaction().replace(R.id.loginFragmentContainerView, new LoginFragment()).commit();
-//        }
+
     }
 }

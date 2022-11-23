@@ -51,11 +51,19 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-//        HomeFragment homeFragment = new HomeFragment();
+
+        HomeFragment homeFragment = new HomeFragment();
+        LibraryCollectionsFragment libraryCollectionsFragment = new LibraryCollectionsFragment();
+        BookMarksFragment bookMarksFragment = new BookMarksFragment();
         Author_profile_Fragment author_profile_fragment = new Author_profile_Fragment(constraintLayout);
+        AuthorArticlesFragment authorArticlesFragment = new AuthorArticlesFragment();
+        HistoryFragment historyFragment = new HistoryFragment();
+        FollowingAuthorsFragment followingAuthorsFragment = new FollowingAuthorsFragment();
+        AuthorsCollectionFragment authorsCollectionFragment = new AuthorsCollectionFragment();
+        CollectionArticlesFragment collectionArticlesFragment = new CollectionArticlesFragment();
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.add(R.id.frame, author_profile_fragment, "HELLO");
+        fragmentTransaction.add(R.id.frame, homeFragment, "HELLO");
         fragmentTransaction.commit();
     }
 

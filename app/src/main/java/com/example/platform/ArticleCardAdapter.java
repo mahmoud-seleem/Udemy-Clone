@@ -6,11 +6,11 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
-import android.widget.ScrollView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -29,12 +29,14 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
     Context context;
     int cardLayoutResourceID;
     Fragment fragment;
+    RecyclerView parent;
 
-    public ArticleCardAdapter(Context context, Fragment fragment, ArrayList<ArticleCard> cards, int cardLayoutResourceID) {
+    public ArticleCardAdapter(Context context, Fragment fragment, ArrayList<ArticleCard> cards, int cardLayoutResourceID, RecyclerView parent) {
         this.cards = cards;
         this.context = context;
         this.cardLayoutResourceID = cardLayoutResourceID;
         this.fragment = fragment;
+        this.parent = parent;
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -54,6 +56,7 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
         holder.cardTitle.setText(card.getArticleTitle());
         String duration = card.getMinimumReadingTime() + "-" + card.getMaxReadingTime() + " min";
         holder.cardDuration.setText(duration);
+        holder.cardChipGroup.removeAllViews();
         for (Tag tag : card.getTags()) {
             Chip chip = makeChip(tag.getTagName(), tag.getTagIconResourceId());
             holder.cardChipGroup.addView(chip);
@@ -76,7 +79,8 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
 //
 //                }
 //            });
-        }
+    }
+
     @Override
     public int getItemCount() {
         return cards.size();
@@ -102,7 +106,8 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
         TextView cardTitle;
         TextView cardDuration;
         ChipGroup cardChipGroup;
-        NestedScrollView scrollView;
+        LinearLayout scrollView1;
+        HorizontalScrollView scrollView;
 
         @SuppressLint("ClickableViewAccessibility")
         public CardViewHolder(@NonNull View itemView) {
@@ -113,7 +118,12 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
                 int width = displayMetrics.widthPixels;
                 itemView.setLayoutParams(new RecyclerView.LayoutParams(width / 3, RecyclerView.LayoutParams.MATCH_PARENT));
             }
-            scrollView = itemView.findViewById(R.id.horizontalScrollView);
+            if (cardLayoutResourceID == R.layout.history_and_bookmaks_card_layout) {
+                itemView.setLayoutParams(new RecyclerView.LayoutParams(parent.getWidth(), RecyclerView.LayoutParams.WRAP_CONTENT));
+                scrollView1 = itemView.findViewById(R.id.horizontalScrollView);
+            } else {
+                scrollView = itemView.findViewById(R.id.horizontalScrollView);
+            }
             cardImageView = itemView.findViewById(R.id.card_image_view);
             cardTitle = itemView.findViewById(R.id.title_text_view);
             cardDuration = itemView.findViewById(R.id.duration_text_view);
