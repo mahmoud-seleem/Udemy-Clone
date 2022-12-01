@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -44,27 +46,64 @@ public class MainActivity extends AppCompatActivity {
                 drawerLayout.openDrawer(GravityCompat.START, true);
             }
         });
+        FragmentManager fm = getSupportFragmentManager();
+        final Fragment[] fragment = new Fragment[1];
+        drawer.setCheckedItem(R.id.home_page);
+        fragment[0] = new HomeFragment();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.frame, fragment[0], "HELLO");
+        fragmentTransaction.commit();
         drawer.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                drawerLayout.closeDrawer(GravityCompat.START, true);
                 item.setChecked(true);
+                int itemId = item.getItemId();
+                FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                switch (itemId) {
+                    case R.id.home_page:
+                        fragment[0] = new HomeFragment();
+                        break;
+                    case R.id.history_page:
+                        fragment[0] = new HistoryFragment();
+                        break;
+                    case R.id.authors_page:
+                        fragment[0] = new FollowingAuthorsFragment();
+                        break;
+                    case R.id.collections_page:
+                        fragment[0] = new LibraryCollectionsFragment();
+                        break;
+                    case R.id.bookmarks_page:
+                        fragment[0] = new BookMarksFragment();
+                        break;
+                }
+                fragmentTransaction.replace(R.id.frame, fragment[0], "HELLO");
+                fragmentTransaction.commit();
                 return true;
             }
         });
-
-        HomeFragment homeFragment = new HomeFragment();
-        LibraryCollectionsFragment libraryCollectionsFragment = new LibraryCollectionsFragment();
-        BookMarksFragment bookMarksFragment = new BookMarksFragment();
-        Author_profile_Fragment author_profile_fragment = new Author_profile_Fragment(constraintLayout);
-        AuthorArticlesFragment authorArticlesFragment = new AuthorArticlesFragment();
-        HistoryFragment historyFragment = new HistoryFragment();
-        FollowingAuthorsFragment followingAuthorsFragment = new FollowingAuthorsFragment();
-        AuthorsCollectionFragment authorsCollectionFragment = new AuthorsCollectionFragment();
-        CollectionArticlesFragment collectionArticlesFragment = new CollectionArticlesFragment();
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.add(R.id.frame, homeFragment, "HELLO");
-        fragmentTransaction.commit();
+        Button settingsButton = findViewById(R.id.drawer_settings_button);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),SettingsActivity.class);
+                startActivity(intent);
+                //drawerLayout.closeDrawer(GravityCompat.START,true);
+            }
+        });
+//        HomeFragment homeFragment = new HomeFragment();
+//        LibraryCollectionsFragment libraryCollectionsFragment = new LibraryCollectionsFragment();
+//        BookMarksFragment bookMarksFragment = new BookMarksFragment();
+//        Author_profile_Fragment author_profile_fragment = new Author_profile_Fragment(constraintLayout);
+//        AuthorArticlesFragment authorArticlesFragment = new AuthorArticlesFragment();
+//        HistoryFragment historyFragment = new HistoryFragment();
+//        FollowingAuthorsFragment followingAuthorsFragment = new FollowingAuthorsFragment();
+//        AuthorsCollectionFragment authorsCollectionFragment = new AuthorsCollectionFragment();
+//        CollectionArticlesFragment collectionArticlesFragment = new CollectionArticlesFragment();
+//        FragmentManager fm = getSupportFragmentManager();
+//        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+//        fragmentTransaction.add(R.id.frame, homeFragment, "HELLO");
+//        fragmentTransaction.commit();
     }
 
     public void launchSignActivity() {

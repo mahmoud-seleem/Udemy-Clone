@@ -90,6 +90,7 @@
                 app:icon="@drawable/main_settings_icon"
                 app:iconPadding="8dp"
                 app:iconSize="24dp"
+                android:id="@+id/drawer_settings_button"
                 app:iconTint="@color/black"
                 app:layout_constraintBottom_toTopOf="@+id/button3"
                 app:layout_constraintEnd_toEndOf="parent"
