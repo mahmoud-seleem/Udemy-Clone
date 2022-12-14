@@ -56,11 +56,11 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
         holder.cardTitle.setText(card.getArticleTitle());
         String duration = card.getMinimumReadingTime() + "-" + card.getMaxReadingTime() + " min";
         holder.cardDuration.setText(duration);
-        holder.cardChipGroup.removeAllViews();
-        for (Tag tag : card.getTags()) {
-            Chip chip = makeChip(tag.getTagName(), tag.getTagIconResourceId());
-            holder.cardChipGroup.addView(chip);
-        }
+//        holder.cardChipGroup.removeAllViews();
+//        for (Tag tag : card.getTags()) {
+//            Chip chip = makeChip(tag.getTagName(), tag.getTagIconResourceId());
+//            holder.cardChipGroup.addView(chip);
+//        }
 //        if (fragment instanceof Author_profile_Fragment) {
 //            holder.scrollView.setOnTouchListener(new View.OnTouchListener() {
 //                @Override
@@ -86,26 +86,26 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
         return cards.size();
     }
 
-    private Chip makeChip(String name, int iconId) {
-        Chip chip = new Chip(context);
-        chip.setText(name);
-        chip.setChipCornerRadius(30);
-        chip.setChipBackgroundColor(ColorStateList.
-                valueOf(Color.parseColor("#FFE0E0E0")));
-        chip.setChipIcon(ContextCompat.getDrawable(context, iconId));
-        chip.setScaleY(0.7f);
-        chip.setScaleX(0.7f);
-        chip.ensureAccessibleTouchTarget(0);
-//        chip.setScaleX(0.7f);
+//    private Chip makeChip(String name, int iconId) {
+//        Chip chip = new Chip(context);
+//        chip.setText(name);
+//        chip.setChipCornerRadius(30);
+//        chip.setChipBackgroundColor(ColorStateList.
+//                valueOf(Color.parseColor("#FFE0E0E0")));
+//        chip.setChipIcon(ContextCompat.getDrawable(context, iconId));
 //        chip.setScaleY(0.7f);
-        return chip;
-    }
+//        chip.setScaleX(0.7f);
+//        chip.ensureAccessibleTouchTarget(0);
+////        chip.setScaleX(0.7f);
+////        chip.setScaleY(0.7f);
+//        return chip;
+//    }
 
     class CardViewHolder extends RecyclerView.ViewHolder {
         ImageView cardImageView;
         TextView cardTitle;
         TextView cardDuration;
-        ChipGroup cardChipGroup;
+//        ChipGroup cardChipGroup;
         LinearLayout scrollView1;
         HorizontalScrollView scrollView;
 
@@ -127,7 +127,7 @@ public class ArticleCardAdapter extends RecyclerView.Adapter<ArticleCardAdapter.
             cardImageView = itemView.findViewById(R.id.card_image_view);
             cardTitle = itemView.findViewById(R.id.title_text_view);
             cardDuration = itemView.findViewById(R.id.duration_text_view);
-            cardChipGroup = itemView.findViewById(R.id.chip_group);
+//            cardChipGroup = itemView.findViewById(R.id.chip_group);
         }
     }
 }

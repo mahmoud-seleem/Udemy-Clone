@@ -20,15 +20,19 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">24sp</item>
     </style>
+
     <style name="ShapeAppearanceOverlay" parent="">
         <item name="cornerSize">50%</item>
     </style>
+
     <style name="library_collections_image_style" parent="">
         <item name="cornerSize">20%</item>
     </style>
-<style name="drawer_style" parent="@style/Widget.Material3.NavigationView">
-    <item name="android:windowTranslucentStatus">true</item>
-</style>
+
+    <style name="drawer_style" parent="@style/Widget.Material3.NavigationView">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
     <style name="drawer_corners_shape" parent="">
         <item name="cornerSize">15%</item>
     </style>
@@ -132,6 +136,10 @@
 
     </style>
 
+    <style name="chip_style" parent="@style/Widget.Material3.Chip.Suggestion">
+
+    </style>
+
     <style name="onBoarding_title">
 
         <item name="android:textSize">
@@ -195,6 +203,7 @@
         </item>
 
     </style>
+
     <style name="headings">
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">20sp</item>
