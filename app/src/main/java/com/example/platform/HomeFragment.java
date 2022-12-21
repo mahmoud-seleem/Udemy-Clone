@@ -1,15 +1,22 @@
 package com.example.platform;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
 
@@ -66,6 +73,8 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.card_recycler_view);
+        ChipGroup chipGroup = view.findViewById(R.id.chip_group);
+        initializeChipGroup(chipGroup);
         ArrayList<ArticleCard> cards = new ArrayList<ArticleCard>();
         cards.add(new ArticleCard());
         cards.add(new ArticleCard());
@@ -85,5 +94,42 @@ public class HomeFragment extends Fragment {
         recyclerView.addItemDecoration(new SpaceItemDecoration(30,30));
         recyclerView.setHasFixedSize(true);
         return view;
+    }
+    private Chip makeChip(String name, int iconId) {
+        Chip chip = new Chip(getContext());
+        chip.setText(name);
+        chip.setChipCornerRadius(30);
+        chip.setChipBackgroundColor(ColorStateList.
+                valueOf(Color.parseColor("#FFE0E0E0")));
+        chip.setChipIcon(ContextCompat.getDrawable(getContext(), iconId));
+//        chip.setScaleY(0.7f);
+//        chip.setScaleX(0.7f);
+        chip.ensureAccessibleTouchTarget(0);
+        chip.setCheckable(true);
+//        chip.setScaleX(0.7f);
+//        chip.setScaleY(0.7f);
+        return chip;
+    }
+    private void initializeChipGroup(ChipGroup chipGroup){
+        chipGroup.removeAllViews();
+        for(int i=0;i<20;i++){
+            Chip chip = makeChip("Home",R.drawable.main_home_icon);
+            chip.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if(b){
+                        chip.setChipStrokeColor(ColorStateList.valueOf(Color.parseColor("#4E60FE")));
+                        chip.setTextColor(Color.parseColor("#4E60FE"));
+                        chip.setChipIconTint(ColorStateList.valueOf(Color.parseColor("#4E60FE")));
+                    }else{
+                        chip.setChipStrokeColor(ColorStateList.valueOf(Color.parseColor("#2B2B43")));
+                        chip.setTextColor(Color.parseColor("#FF000000"));
+                        chip.setChipIconTint(ColorStateList.valueOf(Color.parseColor("#FFFFFF")));
+
+                    }
+                }
+            });
+            chipGroup.addView(chip);
+        }
     }
 }
