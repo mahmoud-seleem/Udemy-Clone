@@ -1,6 +1,7 @@
 package com.example.platform;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
@@ -22,20 +23,38 @@ public class CoursePlayerActivity extends AppCompatActivity {
 
 
         Button hideLessonsBtn = findViewById(R.id.lessons);
-        Button showLessonsFloatingBtn = findViewById(R.id.show_lessons_btn);
+        Button showLessonsBtn = findViewById(R.id.show_lessons_btn);
         hideLessonsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 YoYo.with(Techniques.FadeOutLeft)
-                        .duration(1000)
+                        .duration(800)
                         .repeat(0)
                         .playOn(lessonsLayout)
                 ;
-                showLessonsFloatingBtn.setVisibility(View.VISIBLE);
+                Handler delayHandler = new Handler();
+                delayHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        showLessonsBtn.setVisibility(View.VISIBLE);
+                    }
+                }, 500);
+
 
             }
         })
         ;
+
+        showLessonsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showLessonsBtn.setVisibility(View.GONE);
+                YoYo.with(Techniques.BounceInLeft)
+                        .duration(800)
+                        .repeat(0)
+                        .playOn(lessonsLayout);
+            }
+        });
 
     }
 }
