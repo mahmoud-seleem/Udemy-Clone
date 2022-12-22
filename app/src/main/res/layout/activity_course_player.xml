@@ -12,23 +12,23 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/bar"
-            android:background="@color/blue"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintHeight_percent="0.07"
+            android:background="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.07"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:clickable="true"
-                android:focusable="true"
                 android:id="@+id/settings_toolbar_backImageView"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="8dp"
                 android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
                 android:contentDescription="@string/app_name"
+                android:focusable="true"
                 android:padding="8dp"
                 android:src="@drawable/settings_toolbar_back_icon"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -64,17 +64,18 @@
 
             <Button
                 android:id="@+id/lessons"
+                style="@style/sharp_button"
                 android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="-4dp"
                 android:backgroundTint="@color/blue"
-                android:layout_height="0dp"
-                style="@style/sharp_button"
+                android:drawableEnd="@drawable/course_player_lessons_icon"
                 android:text="@string/app_name"
                 android:textAlignment="viewStart"
-                android:drawableEnd="@drawable/course_player_lessons_icon"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.05"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -106,36 +107,23 @@
             style="?attr/materialIconButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:backgroundTint="@color/blue"
             android:contentDescription="@string/app_name"
             android:drawableStart="@drawable/course_player_lessons_icon"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
-            tools:layout_editor_absoluteX="359dp"
-            tools:layout_editor_absoluteY="260dp"
+            android:minWidth="48dp"
             android:visibility="gone"
-            app:iconTint="@color/white"
             app:icon="@drawable/course_player_lessons_icon"
             app:iconPadding="0dp"
             app:iconSize="24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/bar"
-            app:layout_constraintTop_toBottomOf="@id/bar"
-            app:layout_constraintVertical_bias="0.0"
-            android:layout_margin="16dp" />
-        <!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-        <!--            android:id="@+id/show_lessons_fab"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_gravity="top|start"-->
-        <!--            android:layout_margin="16dp"-->
-        <!--            app:srcCompat="@drawable/course_player_lessons_icon"-->
-        <!--            android:contentDescription="@string/app_name"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toTopOf="@+id/lessons_layout"-->
-        <!--            android:visibility="gone" />-->
+            app:iconTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/lessons_layout"
+            app:layout_constraintEnd_toEndOf="@id/lessons_layout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintStart_toStartOf="@id/lessons_layout"
+            app:layout_constraintTop_toTopOf="@+id/lessons_layout" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
