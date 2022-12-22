@@ -207,7 +207,7 @@
     <style name="sharp_button">
         <item name="cornerRadius">0dp</item>
     </style>
-    <style name="circular_button">
+    <style name="rounded_view">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
