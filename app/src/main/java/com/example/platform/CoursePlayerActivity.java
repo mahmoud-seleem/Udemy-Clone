@@ -6,9 +6,12 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+
+import java.util.ArrayList;
 
 public class CoursePlayerActivity extends AppCompatActivity {
 
@@ -56,5 +59,17 @@ public class CoursePlayerActivity extends AppCompatActivity {
             }
         });
 
+
+        ArrayList<Lesson> lessons = new ArrayList<>();
+        setupLessons(lessons);
+        RecyclerView lessonsRecyclerView = findViewById(R.id.lessons_recyclerView);
+        Adapter lessonsAdapter = new Adapter(this, lessons, R.layout.course_player_lesson_card);
+        lessonsRecyclerView.setAdapter(lessonsAdapter);
+    }
+
+    private void setupLessons(ArrayList<Lesson> lessons) {
+        for (int i = 0; i < 20; i++) {
+            lessons.add(new Lesson("lesson", R.drawable.ic_baseline_radio_button_unchecked_24));
+        }
     }
 }
