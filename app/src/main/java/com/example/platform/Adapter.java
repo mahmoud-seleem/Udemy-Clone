@@ -36,8 +36,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.CardViewHolder> {
     public void onBindViewHolder(@NonNull CardViewHolder holder, int position) {
         if (itemLayoutId == R.layout.course_player_lesson_card) {
             Lesson lesson = lessons.get(position);
-            holder.img.setImageResource(lesson.getLessonIcon());
             holder.title.setText(lesson.getLessonTitle());
+            holder.img.setImageResource(lesson.getLessonIcon());
+            holder.img.setOnClickListener(new View.OnClickListener() {
+                                              @Override
+                                              public void onClick(View v) {
+                                                  holder.img.setImageResource(R.drawable.ic_baseline_check_circle_24);
+                                              }
+                                          }
+            );
         }
     }
 
