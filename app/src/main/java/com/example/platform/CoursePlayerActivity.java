@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.daimajia.androidanimations.library.Techniques;
@@ -63,7 +64,10 @@ public class CoursePlayerActivity extends AppCompatActivity {
         ArrayList<Lesson> lessons = new ArrayList<>();
         setupLessons(lessons);
         RecyclerView lessonsRecyclerView = findViewById(R.id.lessons_recyclerView);
-        Adapter lessonsAdapter = new Adapter(this, lessons, R.layout.course_player_lesson_card);
+        LinearLayoutManager manager = new LinearLayoutManager(this);
+        lessonsRecyclerView.setLayoutManager(manager);
+        Adapter lessonsAdapter = new Adapter(this.getBaseContext(), lessons, R.layout.course_player_lesson_card);
+//        CoursePlayerLessonsAdapter lessonsAdapter = new CoursePlayerLessonsAdapter(this, lessons);
         lessonsRecyclerView.setAdapter(lessonsAdapter);
     }
 
