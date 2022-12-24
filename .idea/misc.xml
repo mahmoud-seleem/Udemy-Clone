@@ -6,6 +6,7 @@
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/drawable-v24/ic_menu_white.xml" value="0.203" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/drawable-v24/sign_activity_cards.xml" value="0.158" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/drawable/box.xml" value="0.2225" />
+        <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/drawable/course_player_lessons_icon.xml" value="0.2155" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/drawable/ic_menu.xml" value="0.228" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/drawable/ic_notifications.xml" value="0.228" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/drawable/ic_search.xml" value="0.1915" />
@@ -20,18 +21,26 @@
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/drawable/signactivity_login_button.xml" value="0.1295" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/drawable/text_field.xml" value="0.15" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/activity_article.xml" value="0.22826086956521738" />
+        <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/activity_course_player.xml" value="0.1971608832807571" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/activity_settings.xml" value="0.22826086956521738" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/activity_sign.xml" value="0.1" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/authors_collection_card.xml" value="0.4" />
+        <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/course_player_lesson_card.xml" value="0.264" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/favourite_author_card.xml" value="0.1" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/favourite_authors_card.xml" value="0.1265625" />
+        <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/following_authors_card.xml" value="0.11633663366336634" />
+        <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/fragment_author_articles.xml" value="0.11633663366336634" />
+        <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/fragment_author_profile_.xml" value="0.11633663366336634" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/fragment_authors_collection.xml" value="0.1" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/fragment_favourite_authors.xml" value="0.1" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/fragment_login.xml" value="0.20253164556962025" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/fragment_sign_up_basic_info.xml" value="0.264" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/fragment_view_pager_item1_sign_cards.xml" value="0.12005208333333334" />
+        <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/history_and_bookmaks_card_layout.xml" value="0.1" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/layout.xml" value="0.12708333333333333" />
+        <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/lesson_card.xml" value="0.11633663366336634" />
+        <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/library_collections_card.xml" value="0.2" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/main_article_card_layout.xml" value="0.1" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/main_article_card_layout_with_fixed_size.xml" value="0.1" />
         <entry key="..\:/4th_year_Biomedical/GP_project/platform/app/src/main/res/layout/main_navigation_courses_layout.xml" value="0.1" />

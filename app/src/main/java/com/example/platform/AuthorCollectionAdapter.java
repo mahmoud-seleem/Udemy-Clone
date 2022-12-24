@@ -86,7 +86,7 @@ public class AuthorCollectionAdapter extends RecyclerView.Adapter<AuthorCollecti
 
         public CardViewHolder(@NonNull View itemView) {
             super(itemView);
-            if (fragment instanceof Author_profile_Fragment){
+            if (fragment instanceof Author_profile_Fragment) {
                 DisplayMetrics displayMetrics = new DisplayMetrics();
                 ((MainActivity) context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
                 int width = displayMetrics.widthPixels;

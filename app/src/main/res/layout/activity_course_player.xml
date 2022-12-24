@@ -6,117 +6,122 @@
     android:layout_height="match_parent"
     tools:context=".CoursePlayerActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/bar"
-        android:background="@color/blue"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.07"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-        <ImageView
-            android:clickable="true"
-            android:focusable="true"
-            android:id="@+id/settings_toolbar_backImageView"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="8dp"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:contentDescription="@string/app_name"
-            android:padding="8dp"
-            android:src="@drawable/settings_toolbar_back_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="w,1:1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.516" />
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/settings_toolbar_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:text="@string/app_name"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="@+id/settings_toolbar_backImageView"
-            app:layout_constraintStart_toEndOf="@id/settings_toolbar_backImageView"
-            app:layout_constraintTop_toTopOf="@+id/settings_toolbar_backImageView" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/light_gray"
-        android:id="@+id/lessons_layout"
-        app:layout_constraintEnd_toStartOf="@id/course_recycler_view"
-        app:layout_constraintWidth_percent="0.2"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bar">
-
-        <Button
-            android:id="@+id/lessons"
-            android:layout_width="0dp"
-            android:layout_marginTop="-4dp"
-            android:backgroundTint="@color/blue"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            style="@style/sharp_button"
-            android:text="@string/app_name"
-            android:textAlignment="viewStart"
-            android:drawableEnd="@drawable/course_player_lessons_icon"
-            android:textColor="@color/white"
+            android:background="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.08"
+            app:layout_constraintHeight_percent="0.07"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/settings_toolbar_backImageView"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/settings_toolbar_back_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="w,1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.516" />
+
+            <TextView
+                android:id="@+id/settings_toolbar_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/settings_toolbar_backImageView"
+                app:layout_constraintStart_toEndOf="@id/settings_toolbar_backImageView"
+                app:layout_constraintTop_toTopOf="@+id/settings_toolbar_backImageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/light_gray"
+            android:id="@+id/lessons_layout"
+            app:layout_constraintEnd_toStartOf="@id/course_recycler_view"
+            app:layout_constraintWidth_percent="0.2"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bar">
+
+            <Button
+                android:id="@+id/lessons"
+                style="@style/sharp_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="-4dp"
+                android:backgroundTint="@color/blue"
+                android:drawableEnd="@drawable/course_player_lessons_icon"
+                android:text="@string/app_name"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.05"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lessons_recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/lessons"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/course_player_lesson_card" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/lessons"
+            android:id="@+id/course_recycler_view"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/lessons_layout"
+            app:layout_constraintTop_toBottomOf="@+id/bar"
+            app:layout_constraintWidth_percent="1" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/course_recycler_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lessons_layout"
-        app:layout_constraintTop_toBottomOf="@+id/bar"
-        app:layout_constraintVertical_bias="1.0"
-        app:layout_constraintWidth_percent="0.8" />
-
-    <Button
-        android:id="@+id/floating_action_button2"
-        style="?attr/materialIconButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:backgroundTint="@color/blue"
-        android:contentDescription="@string/app_name"
-        android:insetLeft="0dp"
-        android:insetTop="0dp"
-        android:insetRight="0dp"
-        android:insetBottom="0dp"
-        android:visibility="gone"
-        app:iconTint="@color/white"
-        app:icon="@drawable/course_player_lessons_icon"
-        app:iconPadding="0dp"
-        app:iconSize="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@id/bar"
-        app:layout_constraintTop_toBottomOf="@id/bar"
-        app:layout_constraintVertical_bias="0.0" />
-
+        <Button
+            android:id="@+id/show_lessons_btn"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/blue"
+            android:contentDescription="@string/app_name"
+            android:drawableStart="@drawable/course_player_lessons_icon"
+            android:minWidth="48dp"
+            android:visibility="gone"
+            app:icon="@drawable/course_player_lessons_icon"
+            app:iconPadding="0dp"
+            app:iconSize="24dp"
+            app:iconTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/lessons_layout"
+            app:layout_constraintEnd_toEndOf="@id/lessons_layout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintStart_toStartOf="@id/lessons_layout"
+            app:layout_constraintTop_toTopOf="@+id/lessons_layout" />
     <Button
         android:id="@+id/features_button"
         style="?attr/materialIconButtonStyle"
@@ -166,3 +171,4 @@
         </com.google.android.material.chip.ChipGroup>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
