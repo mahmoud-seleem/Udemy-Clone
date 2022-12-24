@@ -38,6 +38,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.CardViewHolder> {
             Lesson lesson = lessons.get(position);
             holder.img.setImageResource(lesson.getLessonIcon());
             holder.title.setText(lesson.getLessonTitle());
+            holder.img.setOnClickListener(new View.OnClickListener() {
+                                              @Override
+                                              public void onClick(View v) {
+                                                  holder.img.setImageResource(R.drawable.ic_baseline_check_circle_24);
+                                              }
+                                          }
+            );
         }
     }
 
